@@ -6,10 +6,13 @@ console.log("Chrome extension is running");
 
 // Change the URL below to try other variants
 var guestreviewfilter = chrome.extension.getURL("guestreviewfilter01.html");
-
-$.get( guestreviewfilter, function( data ) {
-  $("#lodgingTypecontainer").after(data);
+$.get( guestreviewfilter, function( myHTML ) {
+  var $container = $("#lodgingTypecontainer");
   // alert( "Load was performed." );
-  // var variantdescription = $("div.uxvariant").text;
-  // console.log(variantdescription);
+  $container.after(myHTML);
 });
+
+$(document).ready(function(){
+  var variantdescription = $('[data-variant]').data('variant');
+  console.log(variantdescription);
+})
