@@ -1,4 +1,4 @@
-Chrome extension starting bundle
+2932 - Guest Review Filter
 ================================
 
-A basic starting point for all chrome extensions. Not all the files are needed for every extension, but the core basics are covered.
+Type $('[data-variant]').data('variant'); into the console to find out about the variant

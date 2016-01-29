@@ -14,5 +14,5 @@ $.get( guestreviewfilter, function( myHTML ) {
 
 $(document).ready(function(){
   var variantdescription = $('[data-variant]').data('variant');
-  console.log(variantdescription);
+  console.log("Variant " +variantdescription);
 })
