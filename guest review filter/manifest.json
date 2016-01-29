@@ -1,0 +1,30 @@
+{
+  "name": "9232 - Guest review filter on HSR",
+  "version": "1",
+  "description": "Adds guest riview filters on HSR",
+
+  "browser_action": {
+    "name": "Manipulate DOM",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png"
+  },
+
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "js": [ "jquery-2.0.2.min.js", "background.js" ],
+      "css": ["customStyles.css"],
+      "matches": ["https://www.expedia.com/Hotel-Search*"]
+    }
+  ],
+
+  "web_accessible_resources": [
+   "guestreviewfilter.html"
+ ],
+
+  "manifest_version": 2
+}
