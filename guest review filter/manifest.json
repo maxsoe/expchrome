@@ -23,7 +23,10 @@
   ],
 
   "web_accessible_resources": [
-   "guestreviewfilter01.html"
+   "guestreviewfilter01.html",
+   "guestreviewfilter02.html",
+   "guestreviewfilter03.html",
+   "guestreviewfilter04.html"
  ],
 
   "manifest_version": 2
