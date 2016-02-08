@@ -24,7 +24,10 @@ var background = {
     this.variant = request.value;
 
     // TODO send a message to the content script to change the page's DOM
-    // chrome.runtime.sendMessage({fn: "setVariant", value: request.value});
+    console.log("Send message with function setContent");
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+      chrome.tabs.sendMessage(tabs[0].id,{fn: "setContent", value: request.value});
+    });
   },
 
   getVariant: function(request, sender, sendResponse) {
