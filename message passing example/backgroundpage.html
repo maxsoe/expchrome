@@ -1,0 +1,8 @@
+<script>
+chrome.extension.onRequest.addListener(function(feeds, sender, sendResponse){
+  if (feeds.length > 0) {
+    chrome.pageAction.show(sender.tab.id);
+  }
+  sendResponse();
+});
+</script>
