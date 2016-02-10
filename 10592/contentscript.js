@@ -42,6 +42,17 @@ var content = {
     // set the current object(background)'s variant to be the same as popup's
     // this.variant = request.value;
 
+    // Insert the content into the page
+    $(".hotelWrapper .expediaPoints").remove();
+    var guestreviewfilter = chrome.extension.getURL("html/var01.html");
+    $.get( guestreviewfilter, function( myHTML ) {
+      var $container = $(".hotelWrapper .ratingContainer");
+      // alert( "Load was performed." );
+      $container.after(myHTML);
+    });
+
+
+
   }
 
 };
