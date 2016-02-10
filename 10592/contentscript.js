@@ -31,9 +31,9 @@ var content = {
     chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       console.log("message received by contentscript");
 
-      // if (request.fn in content) {
-      //   content[request.fn](request, sender, sendResponse);
-      // }
+      if (request.fn in content) {
+        content[request.fn](request, sender, sendResponse);
+      }
     });
   },
 
