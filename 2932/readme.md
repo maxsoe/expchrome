@@ -1,4 +1,4 @@
-## Virtual Tours
+## Guest Review Filter on HSR
 
 Type $('[data-variant]').data('variant'); into the console to find out about the variant
 
