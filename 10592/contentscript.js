@@ -23,7 +23,6 @@ var content = {
     $(".hotelWrapper .expediaPoints").remove();
     $(".hotelWrapper .actualPrice").empty();
     $(".hotelWrapper .priceType").empty();
-    $(".expediaPoints").css();
 
     // Insert the content into the page
     var currentVariant = chrome.extension.getURL("html/"+request.value +".html");
