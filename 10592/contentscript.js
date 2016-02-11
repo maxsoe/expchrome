@@ -19,8 +19,13 @@ var content = {
   setContent: function(request, sender, sendResponse) {
     console.log("Content script: setting variant", request);
 
-    // Insert the content into the page
+    // Clear things from other variants
     $(".hotelWrapper .expediaPoints").remove();
+    $(".hotelWrapper .actualPrice").empty();
+    $(".hotelWrapper .priceType").empty();
+    $(".expediaPoints").css();
+
+    // Insert the content into the page
     var currentVariant = chrome.extension.getURL("html/"+request.value +".html");
     $.get( currentVariant, function( myHTML ) {
       var headContent = $(myHTML)[1];
@@ -32,11 +37,12 @@ var content = {
       var priceType = $(myHTML).filter('.priceType')[0].innerHTML;
 
       console.log("Expedia:", expediaPoints);
-      console.log("actualPrice: ", actualPrice);
-      console.log("priceType: ", priceType);
-
       $(".hotelWrapper .ratingContainer").after(expediaPoints);
+
+      console.log("actualPrice: ", actualPrice);
       $(".hotelWrapper .actualPrice").html(actualPrice);
+
+      console.log("priceType: ", priceType);
       $(".hotelWrapper .priceType").html(priceType);
 
       // Remove points earning
