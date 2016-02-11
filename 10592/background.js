@@ -1,6 +1,6 @@
 /* globals chrome */
 
-console.log("Multiple options. This is background.js");
+console.log("This is background.js");
 
 var background = {
   // set sku to an empty string
@@ -23,9 +23,10 @@ var background = {
     // set the current object(background)'s variant to be the same as popup's
     this.variant = request.value;
 
-    // TODO send a message to the content script to change the page's DOM
+    // Send a message to the content script to change the page's DOM
     console.log("Send message with function setContent");
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+      // The content script is set on the active tab (tabs[0].id)
       chrome.tabs.sendMessage(tabs[0].id,{fn: "setContent", value: request.value});
     });
   },
