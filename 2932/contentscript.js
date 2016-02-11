@@ -5,7 +5,7 @@
 console.log("Chrome extension is running");
 
 // Change the URL below to try other variants
-var guestreviewfilter = chrome.extension.getURL("guestreviewfilter14.html");
+var guestreviewfilter = chrome.extension.getURL("guestreviewfilter17.html");
 $.get( guestreviewfilter, function( myHTML ) {
   var $container = $("#ratingContainer");
   // alert( "Load was performed." );
