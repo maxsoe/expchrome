@@ -6,7 +6,7 @@ console.log("Chrome extension is running");
 console.log("Currently favoured variants are guestreviewfilter08outof5.html and guestreviewfilter15.html");
 
 // Change the URL below to try other variants
-var guestreviewfilter = chrome.extension.getURL("guestreviewfilter17.html");
+var guestreviewfilter = chrome.extension.getURL("guestreviewfilter18.html");
 $.get( guestreviewfilter, function( myHTML ) {
   var $container = $("#ratingContainer");
   // alert( "Load was performed." );
