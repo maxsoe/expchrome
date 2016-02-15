@@ -1,23 +1,3 @@
-//The code that is fired upon page load
-//to check your plugin js is working uncomment the next line.
-//$("body").append('Test');
-
-// console.log("Chrome extension is running");
-//
-// // Change the URL below to try other variants
-// var variant = chrome.extension.getURL("guestreviewfilter09outof5.html");
-// $.get( guestreviewfilter, function( myHTML ) {
-//   var $container = $("#ratingContainer");
-//   // alert( "Load was performed." );
-//   $container.after(myHTML);
-// });
-//
-// $(document).ready(function(){
-//   var variantdescription = $('[data-variant]').data('variant');
-//   console.log("Variant: " +variantdescription);
-// })
-//
-
 /* globals chrome */
 
 var content = {
@@ -25,7 +5,6 @@ var content = {
 
   init: function() {
     console.log("contentscript initiated");
-    //TODO run setVariant based on background.js
 
     // listen for any messages, and route them to functions
     chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
@@ -39,9 +18,36 @@ var content = {
 
   setContent: function(request, sender, sendResponse) {
     console.log("Content script: setting variant", request);
-    // set the current object(background)'s variant to be the same as popup's
-    // this.variant = request.value;
 
+    // Clear things from other variants
+    $(".hotelWrapper .expediaPoints").remove();
+    $(".hotelWrapper .actualPrice").empty();
+    $(".hotelWrapper .priceType").empty();
+
+    // Insert the content into the page
+    var currentVariant = chrome.extension.getURL("html/"+request.value +".html");
+    $.get( currentVariant, function( myHTML ) {
+      var headContent = $(myHTML)[1];
+      console.log("headContent: ", headContent);
+      $("head").append(headContent);
+
+      var expediaPoints = $(myHTML).filter('.expediaPoints')[0].outerHTML;
+      var actualPrice = $(myHTML).filter('.actualPrice')[0].innerHTML;
+      var priceType = $(myHTML).filter('.priceType')[0].innerHTML;
+
+      console.log("Expedia:", expediaPoints);
+      $(".hotelWrapper .ratingContainer").after(expediaPoints);
+
+      console.log("actualPrice: ", actualPrice);
+      $(".hotelWrapper .actualPrice").html(actualPrice);
+
+      console.log("priceType: ", priceType);
+      $(".hotelWrapper .priceType").html(priceType);
+
+      // Remove points earning
+      $(".hotelWrapper .earnPointsText").empty();
+
+    });
   }
 
 };
