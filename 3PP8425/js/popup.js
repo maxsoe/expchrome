@@ -6,6 +6,16 @@ console.log("Popup activated");
 
 var app = {
   init: function() {
+
+    // listen for any messages, and route them to functions
+    chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+      console.log("message received by contentscript");
+
+      if (request.fn in app) {
+        app[request.fn](request, sender, sendResponse);
+      }
+    });
+
     // Set up display in popup
     var title = chrome.runtime.getManifest().name;
     var description = chrome.runtime.getManifest().description;
@@ -38,6 +48,7 @@ var app = {
     chrome.runtime.sendMessage({
       fn: "getVariant"
     }, function(response) {
+      // Get the response from any listeners and play it back
       console.log("popup got response", response);
       // Set value of checked to current variant
       console.log('this.response is ' + response);
@@ -51,6 +62,7 @@ var app = {
     for (i = 0; i < $getVariants.length; i++) {
       // look at the current variant defined by the index
       var $currentVariant = $getVariants[i];
+      // Listen for any click events from any of the variants
       $currentVariant.addEventListener('click', (function(valueCopy) {
         return function() {
           // do something to this variant
