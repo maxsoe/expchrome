@@ -7,17 +7,20 @@ console.log("Popup activated");
 // Set up display in popup
 var title = chrome.runtime.getManifest().name;
 var description = chrome.runtime.getManifest().description;
-$("body h1").text(title);
-$("body h2").text(description);
+
 
 var $testVariants = chrome.runtime.getManifest().web_accessible_resources;
 
 console.log("Variants are ", $testVariants);
 
-$testVariants.forEach(logArrayElements);
+
 
 function logArrayElements(element, index, array){
+  // Remove unwanted parts of the string
+  element = element.replace("html/", "");
+  element = element.replace(".html", "");
   console.log('a[' + index + '] = ' + element);
+  $("form").append('<br><input type="radio" name="variant" class="variant" value="' +element +'">' +element);
 }
 
 var app = {
@@ -26,8 +29,12 @@ var app = {
     // var $sku = document.getElementById("sku");
     // var $skuInput = document.getElementById("useSku");
 
+    console.log("Popup initiated");
 
+    $("body h1").text(title);
+    $("body h2").text(description);
 
+    $testVariants.forEach(logArrayElements);
 
     var $variants = document.getElementsByClassName("variant");
 
