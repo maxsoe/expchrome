@@ -4,17 +4,30 @@ var console = chrome.extension.getBackgroundPage().console;
 
 console.log("Popup activated");
 
+// Set up display in popup
+var title = chrome.runtime.getManifest().name;
+var description = chrome.runtime.getManifest().description;
+$("body h1").text(title);
+$("body h2").text(description);
+
+var $testVariants = chrome.runtime.getManifest().web_accessible_resources;
+
+console.log("Variants are ", $testVariants);
+
+$testVariants.forEach(logArrayElements);
+
+function logArrayElements(element, index, array){
+  console.log('a[' + index + '] = ' + element);
+}
+
 var app = {
   init: function() {
     // cache some element references
     // var $sku = document.getElementById("sku");
     // var $skuInput = document.getElementById("useSku");
 
-    // Set title in popup
-    var title = chrome.runtime.getManifest().name;
-    var description = chrome.runtime.getManifest().description;
-    $("body h1").text(title);
-    $("body h2").text(description);
+
+
 
     var $variants = document.getElementsByClassName("variant");
 
@@ -26,7 +39,9 @@ var app = {
       // TODO set value to checked for current variant
       console.log('this.response is ' + response);
 
-      $("input[value=" + response + "]").prop('checked', true);
+      if (response != 0) {
+        $("input[value=" + response + "]").prop('checked', true);
+      }
     });
 
     // loop through variants
