@@ -38,10 +38,10 @@ var content = {
       $("head").append(headContent);
 
       var numberOfNights = $(myHTML).filter('.numberOfNights')[0].outerHTML;
-        // var actualPrice = $(myHTML).filter('.actualPrice')[0].innerHTML;
-        // var priceType = $(myHTML).filter('.priceType')[0].innerHTML;
+      var variantName = $(myHTML).filter('.variantName')[0].innerHTML;
 
-      console.log("numberOfNights:", numberOfNights);
+      // console.log("numberOfNights:", numberOfNights);
+      console.log("Variant :", variantName);
 
       // Var 1
       $(".var01 .hotel-primary .flex-content .flex-area-primary>div:nth-of-type(2)").after(numberOfNights);

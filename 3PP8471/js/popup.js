@@ -4,27 +4,8 @@ var console = chrome.extension.getBackgroundPage().console;
 
 console.log("Popup activated");
 
-// Set up display in popup
-var title = chrome.runtime.getManifest().name;
-var description = chrome.runtime.getManifest().description;
-
-var $setVariants = chrome.runtime.getManifest().web_accessible_resources;
-
-console.log("Variants are ", $setVariants);
 
 
-
-function logArrayElements(element, index, array){
-  // Remove unwanted parts of the string
-  element = element.replace("html/", "");
-  element = element.replace(".html", "");
-
-  // Show the array
-  console.log('a[' + index + '] = ' + element);
-
-  // Add variants into popup
-  $("form").append('<br><input type="radio" name="variant" class="variant" value="' +element +'">' +element);
-}
 
 var app = {
   init: function() {
@@ -32,12 +13,31 @@ var app = {
     // var $sku = document.getElementById("sku");
     // var $skuInput = document.getElementById("useSku");
 
+    // Set up display in popup
+    var title = chrome.runtime.getManifest().name;
+    var description = chrome.runtime.getManifest().description;
+    var $setVariants = chrome.runtime.getManifest().web_accessible_resources;
+
+    console.log("Variants are ", $setVariants);
+
+    function webAccessibleResource(element, index, array){
+      // Remove unwanted parts of the string
+      element = element.replace("html/", "");
+      element = element.replace(".html", "");
+
+      // Show the array
+      console.log('a[' + index + '] = ' + element);
+
+      // Add variants into popup
+      $("form").append('<br><input type="radio" name="variant" class="variant" value="' +element +'">' +element);
+    };
+
     console.log("Popup initiated");
 
     $("body h1").text(title);
     $("body h2").text(description);
 
-    $setVariants.forEach(logArrayElements);
+    $setVariants.forEach(webAccessibleResource);
 
     var $variants = document.getElementsByClassName("variant");
 
