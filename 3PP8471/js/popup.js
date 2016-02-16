@@ -10,6 +10,12 @@ var app = {
     // var $sku = document.getElementById("sku");
     // var $skuInput = document.getElementById("useSku");
 
+    // Set title in popup
+    var title = chrome.runtime.getManifest().name;
+    var description = chrome.runtime.getManifest().description;
+    $("body h1").text(title);
+    $("body h2").text(description);
+
     var $variants = document.getElementsByClassName("variant");
 
     // go get a variant if it's in the background page
