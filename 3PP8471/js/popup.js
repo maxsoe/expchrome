@@ -46,7 +46,7 @@ var app = {
       fn: "getVariant"
     }, function(response) {
       console.log("popup got response", response);
-      // TODO set value to checked for current variant
+      // Set value of checked to current variant
       console.log('this.response is ' + response);
 
       if (response != 0) {
