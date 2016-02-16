@@ -42,10 +42,13 @@ var content = {
         // var priceType = $(myHTML).filter('.priceType')[0].innerHTML;
 
       console.log("numberOfNights:", numberOfNights);
+
+      // Var 1
       $(".var01 .hotel-primary .flex-content .flex-area-primary>div:nth-of-type(2)").after(numberOfNights);
       $(".var01 .hotel-secondary .flex-area-primary table").before(numberOfNights);
+      $(".var01 .hotel-secondary .flex-area-primary .numberOfNights").removeClass("secondary");
 
-      // $(".var02 .hotel-primary .hotel-primary .flex-area-primary div[class=secondary]:nth-child(1)").before(numberOfNights);
+      // Var 2
       $(".var02 .hotel-primary .flex-content .flex-area-primary>div:nth-of-type(2)").prepend(numberOfNights);
       $(".var02 .hotel-secondary .flex-area-primary .room>a:nth-of-type(1)").prepend(numberOfNights);
 

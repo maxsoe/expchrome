@@ -2,8 +2,8 @@
 
 console.log("This is background.js");
 
-var version = chrome.app.getDetails().name;
-console.log(version);
+var name = chrome.app.getDetails().name;
+console.log(name);
 
 var background = {
   // set sku to an empty string
