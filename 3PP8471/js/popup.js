@@ -8,10 +8,9 @@ console.log("Popup activated");
 var title = chrome.runtime.getManifest().name;
 var description = chrome.runtime.getManifest().description;
 
+var $setVariants = chrome.runtime.getManifest().web_accessible_resources;
 
-var $testVariants = chrome.runtime.getManifest().web_accessible_resources;
-
-console.log("Variants are ", $testVariants);
+console.log("Variants are ", $setVariants);
 
 
 
@@ -19,7 +18,11 @@ function logArrayElements(element, index, array){
   // Remove unwanted parts of the string
   element = element.replace("html/", "");
   element = element.replace(".html", "");
+
+  // Show the array
   console.log('a[' + index + '] = ' + element);
+
+  // Add variants into popup
   $("form").append('<br><input type="radio" name="variant" class="variant" value="' +element +'">' +element);
 }
 
@@ -34,7 +37,7 @@ var app = {
     $("body h1").text(title);
     $("body h2").text(description);
 
-    $testVariants.forEach(logArrayElements);
+    $setVariants.forEach(logArrayElements);
 
     var $variants = document.getElementsByClassName("variant");
 
