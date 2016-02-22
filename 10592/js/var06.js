@@ -4,7 +4,7 @@ var description = "'Using Expedia+ points' on all prices, not just zero/low";
 console.log("currentVariant: ", currentVariant);
 // Clear things from other variants
   $(".hotelWrapper .expediaPoints").remove();
-  $(".hotelWrapper .actualPrice").empty();
+  // $(".hotelWrapper .actualPrice").empty();
   $(".hotelWrapper .priceType").empty();
 
 // Insert the content into the page
