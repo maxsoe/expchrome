@@ -1,10 +1,9 @@
-console.log("Setting variant 6");
-var currentVariant = chrome.extension.getURL("/html/var06.html");
-var description = "'Using Expedia+ points' on all prices, not just zero/low";
+var currentVariant = chrome.extension.getURL("/html/var07.html");
+var description = "match Expedia+ points text colour with price colour";
 console.log("currentVariant: ", currentVariant);
 // Clear things from other variants
   $(".hotelWrapper .expediaPoints").remove();
-  // $(".hotelWrapper .actualPrice").empty();
+  $(".hotelWrapper .actualPrice").empty();
   $(".hotelWrapper .priceType").empty();
 
 // Insert the content into the page
@@ -19,7 +18,7 @@ console.log("currentVariant: ", currentVariant);
     $(".hotelWrapper .ratingContainer").after(expediaPoints);
 
     console.log("actualPrice: ", actualPrice);
-    $(".resultsContainer div:nth-of-type(4n+3) .actualPrice").html(actualPrice);
+    $(".hotelWrapper .actualPrice").html(actualPrice);
 
     console.log("priceType: ", priceType);
     $(".hotelWrapper .priceType").html(priceType);

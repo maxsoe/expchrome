@@ -26,7 +26,7 @@ var background = {
     // set the current object(background)'s variant to be the same as popup's
     this.variant = request.value;
 
-    // Insert the javascript for the current variant
+    // Insert the javascript/CSS for the current variant
     chrome.tabs.executeScript({
       file: "js/"+request.value +".js"
     });
