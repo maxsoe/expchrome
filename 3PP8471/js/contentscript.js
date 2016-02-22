@@ -21,7 +21,7 @@ var content = {
 
     // Clear things from variants
       $(".numberOfNights").empty();
-      $("body").removeClass("var01 var02");
+      $("body").removeClass("var01 var02 var03 var04");
         // $(".hotelWrapper .expediaPoints").remove();
         // $(".hotelWrapper .actualPrice").empty();
         // $(".hotelWrapper .priceType").empty();
@@ -39,7 +39,9 @@ var content = {
 
       var numberOfNights = $(myHTML).filter('.numberOfNights')[0].outerHTML;
       var variantName = $(myHTML).filter('.variantName')[0].innerHTML;
-      var $duration = $(myHTML).filter('#sw_duration')[0].innerHTML;
+      if (request.value == "var01" || request.value == "var02") {
+        var $duration = $(myHTML).filter('#sw_duration')[0].innerHTML;
+      }
 
       // console.log("numberOfNights:", numberOfNights);
       console.log("Variant :", variantName);
@@ -54,6 +56,15 @@ var content = {
       $(".var02 .hotel-primary .flex-content .flex-area-primary>div:nth-of-type(2)").prepend(numberOfNights);
       $(".var02 .hotel-secondary .flex-area-primary .room>a:nth-of-type(1)").prepend(numberOfNights);
       $(".var02 #sw_duration").html($duration);
+
+      // Var 3
+      $(".var03 .hotel-primary .flex-content .flex-area-primary>div:nth-of-type(2)").after(numberOfNights);
+      $(".var03 .hotel-secondary .flex-area-primary table").before(numberOfNights);
+      $(".var03 .hotel-secondary .flex-area-primary .numberOfNights").removeClass("secondary");
+
+      // Var 4
+      $(".var04 .hotel-primary .flex-content .flex-area-primary>div:nth-of-type(2)").prepend(numberOfNights);
+      $(".var04 .hotel-secondary .flex-area-primary .room>a:nth-of-type(1)").prepend(numberOfNights);
 
         // console.log("actualPrice: ", actualPrice);
         // $(".hotelWrapper .actualPrice").html(actualPrice);
