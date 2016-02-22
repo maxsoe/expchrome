@@ -9,7 +9,7 @@ var app = {
 
     // listen for any messages, and route them to functions
     chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-      console.log("message received by contentscript");
+      console.log("message received by popup");
 
       if (request.fn in app) {
         app[request.fn](request, sender, sendResponse);

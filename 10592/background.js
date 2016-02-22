@@ -27,11 +27,11 @@ var background = {
     this.variant = request.value;
 
     // Insert the javascript/CSS for the current variant
-    chrome.tabs.executeScript({
-      file: "js/"+request.value +".js"
-    });
     chrome.tabs.insertCSS({
       file: "css/"+request.value +".css"
+    });
+    chrome.tabs.executeScript({
+      file: "js/"+request.value +".js"
     });
 
     // Send a message to the content script to change the page's DOM
