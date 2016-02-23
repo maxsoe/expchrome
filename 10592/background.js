@@ -26,12 +26,20 @@ var background = {
     // set the current object(background)'s variant to be the same as popup's
     this.variant = request.value;
 
-    // Send a message to the content script to change the page's DOM
-    console.log("Send message with function setContent");
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      // The content script is set on the active tab (tabs[0].id)
-      chrome.tabs.sendMessage(tabs[0].id,{fn: "setContent", value: request.value});
+    // Insert the javascript/CSS for the current variant
+    chrome.tabs.executeScript({
+      file: "js/"+request.value +".js"
     });
+    chrome.tabs.insertCSS({
+      file: "css/"+request.value +".css"
+    });
+
+    // Send a message to the content script to change the page's DOM
+      // console.log("Send message with function setContent");
+      // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+      //   // The content script is set on the active tab (tabs[0].id)
+      //   chrome.tabs.sendMessage(tabs[0].id,{fn: "setContent", value: request.value});
+      // });
   },
 
   getVariant: function(request, sender, sendResponse) {
