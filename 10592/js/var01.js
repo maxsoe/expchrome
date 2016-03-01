@@ -17,7 +17,7 @@ chrome.runtime.sendMessage({
 
 function setVariant(variant) {
   var currentVariant = chrome.extension.getURL("/html/"+variant +".html");
-  
+
   console.log("currentVariant: ", currentVariant);
   // Clear things from other variants
     $(".hotelWrapper .expediaPoints").remove();
@@ -26,9 +26,9 @@ function setVariant(variant) {
 
   // Insert the content into the page
     $.get( currentVariant, function( myHTML ) {
-      // var headContent = $(myHTML)[1];
-      // console.log("headContent: ", headContent);
-      // $("head").append(headContent);
+      var headContent = $(myHTML)[1];
+      console.log("headContent: ", headContent);
+      $("head").append(headContent);
 
       var expediaPoints = $(myHTML).filter('.expediaPoints')[0].outerHTML;
       var actualPrice = $(myHTML).filter('.actualPrice')[0].innerHTML;

@@ -1,32 +1,50 @@
 console.log("Setting variant 2");
-var currentVariant = chrome.extension.getURL("/html/var02.html");
 var description = "$0, additional context";
-console.log("currentVariant: ", currentVariant);
-// Clear things from other variants
-  $(".hotelWrapper .expediaPoints").remove();
-  $(".hotelWrapper .actualPrice").empty();
-  $(".hotelWrapper .priceType").empty();
 
-// Insert the content into the page
-  $.get( currentVariant, function( myHTML ) {
-    var headContent = $(myHTML)[1];
-    console.log("headContent: ", headContent);
-    $("head").append(headContent);
+chrome.runtime.sendMessage({
+  fn: "getVariant"
+}, function(response) {
+  // Get the response from any listeners and play it back
+    // console.log("var02 got response", response);
+  // Set value of checked to current variant
+    // console.log('this.response is ' + response);
 
-    var expediaPoints = $(myHTML).filter('.expediaPoints')[0].outerHTML;
-    var actualPrice = $(myHTML).filter('.actualPrice')[0].innerHTML;
-    var priceType = $(myHTML).filter('.priceType')[0].innerHTML;
+  if (response != 0) {
+    // console.log("set currentVariant to response");
+    setVariant(response);
+  }
+});
 
-    console.log("Expedia:", expediaPoints);
-    $(".hotelWrapper .ratingContainer").after(expediaPoints);
+function setVariant(variant) {
+  var currentVariant = chrome.extension.getURL("/html/"+variant +".html");
 
-    console.log("actualPrice: ", actualPrice);
-    $(".hotelWrapper .actualPrice").html(actualPrice);
+  console.log("currentVariant: ", currentVariant);
+  // Clear things from other variants
+    $(".hotelWrapper .expediaPoints").remove();
+    $(".hotelWrapper .actualPrice").empty();
+    $(".hotelWrapper .priceType").empty();
 
-    console.log("priceType: ", priceType);
-    $(".hotelWrapper .priceType").html(priceType);
+  // Insert the content into the page
+    $.get( currentVariant, function( myHTML ) {
+      var headContent = $(myHTML)[1];
+      console.log("headContent: ", headContent);
+      $("head").append(headContent);
 
-    // Remove points earning
-    $(".hotelWrapper .earnPointsText").empty();
+      var expediaPoints = $(myHTML).filter('.expediaPoints')[0].outerHTML;
+      var actualPrice = $(myHTML).filter('.actualPrice')[0].innerHTML;
+      var priceType = $(myHTML).filter('.priceType')[0].innerHTML;
 
-  });
+      console.log("Expedia:", expediaPoints);
+      $(".hotelWrapper .ratingContainer").after(expediaPoints);
+
+      console.log("actualPrice: ", actualPrice);
+      $(".hotelWrapper .actualPrice").html(actualPrice);
+
+      console.log("priceType: ", priceType);
+      $(".hotelWrapper .priceType").html(priceType);
+
+      // Remove points earning
+      $(".hotelWrapper .earnPointsText").empty();
+
+    });
+}
