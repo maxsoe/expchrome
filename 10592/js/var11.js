@@ -1,4 +1,4 @@
-console.log("Setting variant 10");
+console.log("Setting variant 11");
 var description = "Free. Use Tooltip with word 'amount'";
 
 chrome.runtime.sendMessage({
@@ -20,7 +20,7 @@ function setVariant(variant) {
   console.log("currentVariant: ", currentVariant);
   // Clear things from other variants
     $(".hotelWrapper .expediaPoints").remove();
-    $(".hotelWrapper .actualPrice").empty();
+    $(".resultsContainer div:nth-of-type(4n+3) .actualPrice").empty();
     $(".hotelWrapper .priceType").empty();
 
   // Insert the content into the page
@@ -36,8 +36,9 @@ function setVariant(variant) {
       // console.log("Expedia:", expediaPoints);
       $(".hotelWrapper .ratingContainer").after(expediaPoints);
 
-      // console.log("actualPrice: ", actualPrice);
-      $(".hotelWrapper .actualPrice").after(actualPrice);
+      console.log("actualPrice: ", actualPrice);
+      // $(".hotelWrapper .actualPrice").after(actualPrice);
+      $(".resultsContainer div:nth-of-type(4n+3) .actualPrice").after(actualPrice);
 
       // console.log("priceType: ", priceType);
       $(".hotelWrapper .priceType").html(priceType);

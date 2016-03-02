@@ -3,7 +3,7 @@ var description = "match Expedia+ points text colour with price colour. Use Tool
 console.log("currentVariant: ", currentVariant);
 // Clear things from other variants
   $(".hotelWrapper .expediaPoints").remove();
-  $(".hotelWrapper .actualPrice").empty();
+  $(".resultsContainer div:nth-of-type(4n+3) .actualPrice").empty();
   $(".hotelWrapper .priceType").empty();
 
 // Insert the content into the page
@@ -20,7 +20,8 @@ console.log("currentVariant: ", currentVariant);
     $(".hotelWrapper .ratingContainer").after(expediaPoints);
 
     // console.log("actualPrice: ", actualPrice);
-    $(".hotelWrapper .actualPrice").after(actualPrice);
+    // $(".hotelWrapper .actualPrice").after(actualPrice);
+    $(".resultsContainer div:nth-of-type(4n+3) .actualPrice").after(actualPrice);
 
     // console.log("priceType: ", priceType);
     $(".hotelWrapper .priceType").html(priceType);
