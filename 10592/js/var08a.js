@@ -1,4 +1,4 @@
-var currentVariant = chrome.extension.getURL("/html/var08.html");
+var currentVariant = chrome.extension.getURL("/html/var08a.html");
 var description = "match Expedia+ points text colour with price colour. Use Tooltip with word 'amount'";
 console.log("currentVariant: ", currentVariant);
 // Clear things from other variants

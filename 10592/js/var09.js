@@ -1,5 +1,5 @@
-var currentVariant = chrome.extension.getURL("/html/var08.html");
-var description = "match Expedia+ points text colour with price colour. Use Tooltip with word 'amount'";
+var currentVariant = chrome.extension.getURL("/html/var09.html");
+var description = "match Expedia+ points text colour with price colour. Use Tooltip with word 'value'";
 console.log("currentVariant: ", currentVariant);
 // Clear things from other variants
   $(".hotelWrapper .expediaPoints").remove();
