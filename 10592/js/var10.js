@@ -41,7 +41,7 @@ function setVariant(variant) {
       $(".resultsContainer div:nth-of-type(4n+3) .actualPrice").after(actualPrice);
 
       // console.log("priceType: ", priceType);
-      $(".hotelWrapper .priceType").html(priceType);
+      // $(".hotelWrapper .priceType").html(priceType);
 
       // console.log(toolTip2);
       $("body").append(toolTip2);
