@@ -1,0 +1,65 @@
+#hotel-map-header {
+  height: 5.352941em !important;
+}
+
+#hotel-map .map-canvas {
+  top: 5.352941em !important;
+}
+
+#hotel-map-header button.btn-book {
+  display: block !important;
+  position: inherit !important;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+@media  (min-width: 45.375em) {
+  #hotel-map-header {
+    height: 8.352941em !important;
+  }
+
+  #hotel-map .map-canvas {
+    top: 8.352941em !important;
+  }
+
+  #hotel-map-header button.btn-book {
+    /*margin-top: 1.6em !important;*/
+    margin-top: 12px;
+  }
+}
+
+@media (min-width:60em) {
+  #legend,
+  #hotel-map .map-canvas
+   {
+    top: 8.352941em !important;
+  }
+
+  #hotel-map-header {
+    height: 8.352941em !important;
+  }
+}
+
+@media (min-width:1280px) {
+  #hotel-map-header button.btn-book {
+    float: left;
+  }
+
+  #legend,
+  #hotel-map .map-canvas
+   {
+    top: 6.352941em !important;
+  }
+
+  #hotel-map-header {
+    height: 6.352941em !important;
+  }
+
+  #hotel-map-header .address {
+    margin-left: 77px;
+  }
+
+  #hotel-map-title {
+    margin-top: 0.47em !important;;
+  }
+}
