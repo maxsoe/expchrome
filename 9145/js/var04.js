@@ -1,4 +1,4 @@
-var description = "Book, rather than the close button";
+var description = "Book, to the left of heading";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
@@ -33,7 +33,6 @@ function setVariant(variant) {
 
       console.log("button:", buttonReplaceClose);
       // $(".map-header .star-rating-wrapper").after(buttonReplaceClose);
-      $(".map-header .map-close").remove();
       $(".map-header h2:first-of-type").before(buttonReplaceClose);
 
     });
