@@ -33,7 +33,7 @@ function setVariant(variant) {
 
       console.log("button:", bookButton);
       // $(".map-header .star-rating-wrapper").after(bookButton);
-      $(".map-header #hotel-map-title").before(bookButton);
+      $(".map-header .address").after(bookButton);
 
     });
 }
