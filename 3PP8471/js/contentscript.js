@@ -39,7 +39,7 @@ var content = {
 
       var numberOfNights = $(myHTML).filter('.numberOfNights')[0].outerHTML;
       var variantName = $(myHTML).filter('.variantName')[0].innerHTML;
-      var $duration = $(myHTML).filter('#sw_duration')[0].innerHTML;
+      // var $duration = $(myHTML).filter('#sw_duration')[0].innerHTML;
 
       // console.log("numberOfNights:", numberOfNights);
       console.log("Variant :", variantName);
@@ -48,12 +48,12 @@ var content = {
       $(".var01 .hotel-primary .flex-content .flex-area-primary>div:nth-of-type(2)").after(numberOfNights);
       $(".var01 .hotel-secondary .flex-area-primary table").before(numberOfNights);
       $(".var01 .hotel-secondary .flex-area-primary .numberOfNights").removeClass("secondary");
-      $(".var01 #sw_duration").html($duration);
+      // $(".var01 #sw_duration").html($duration);
 
       // Var 2
       $(".var02 .hotel-primary .flex-content .flex-area-primary>div:nth-of-type(2)").prepend(numberOfNights);
       $(".var02 .hotel-secondary .flex-area-primary .room>a:nth-of-type(1)").prepend(numberOfNights);
-      $(".var02 #sw_duration").html($duration);
+      // $(".var02 #sw_duration").html($duration);
 
         // console.log("actualPrice: ", actualPrice);
         // $(".hotelWrapper .actualPrice").html(actualPrice);
