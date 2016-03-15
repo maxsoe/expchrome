@@ -22,6 +22,9 @@ function setVariant(variant) {
 
   // Insert the content into the page
     $.get( currentVariant, function( myHTML ) {
+      var headContent = $(myHTML)[1];
+      console.log("headContent: ", headContent);
+      $("head").append(headContent);
 
       var alert = $(myHTML).filter('#alert7')[0].outerHTML;
 
