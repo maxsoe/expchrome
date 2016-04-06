@@ -1,0 +1,39 @@
+#hotel-map .btn-book {
+  display: block;
+  margin: 0 auto;
+}
+.bookButtonContainer {
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 25px);
+  z-index: 1;
+}
+
+.buttonOverlay {
+  position: absolute;
+  bottom: 0;
+  background: black;
+  width: 100%;
+  height: 60px;
+  opacity: 0.5;
+}
+
+.gm-style div:nth-of-type(3),
+.gm-style div:nth-of-type(5),
+.gm-style div:nth-of-type(7),
+.gm-style div:nth-of-type(10),
+.gm-style div:nth-of-type(11) {
+  bottom: 60px !important;
+}
+
+.gm-style div:nth-of-type(8) {
+  bottom: 177px !important;
+}
+
+@media  (min-width: 45.375em) {
+
+}
+
+@media (min-width:60em) {
+
+}
