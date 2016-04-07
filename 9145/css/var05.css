@@ -47,6 +47,14 @@
     display: block !important;
     padding-right: 0;
   }
+
+  .small-map-close {
+    padding-right: 0 !important;
+  }
+
+  .small-map-close .icon-close {
+    font-size: 17px;
+  }
 }
 
 @media (min-width:60em) {

@@ -1,4 +1,4 @@
-var description = "2 rooms, 2 nights - shown before price";
+var description = "(UK) 2 rooms, 2 nights - shown before price";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"

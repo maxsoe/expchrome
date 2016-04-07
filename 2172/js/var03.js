@@ -1,4 +1,4 @@
-var description = "change the column heading to include 2 rooms, 2 nights";
+var description = "(UK) change the column heading to include 2 rooms, 2 nights";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"

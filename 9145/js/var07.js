@@ -32,8 +32,13 @@ function setVariant(variant) {
       var bookButton = $(myHTML).filter('.bookButtonContainer')[0].outerHTML;
 
       console.log("button:", bookButton);
-      // $(".map-header .star-rating-wrapper").after(bookButton);
       $(".map-canvas").append(bookButton);
+
+      var buttonOverlay = $(myHTML).filter('.buttonOverlay')[0].outerHTML;
+      $(".map-canvas").append(buttonOverlay);
+
+      var mapClose = $(myHTML).filter('.map-close')[0].outerHTML;
+      $(".map-header .map-close").replaceWith(mapClose);
 
     });
 }
