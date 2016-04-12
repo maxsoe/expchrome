@@ -33,7 +33,7 @@ function setVariant(variant) {
       var avgrateperroom = $(myHTML).filter('.avg-rate-per-room')[0].outerHTML;
       // var avgrateperroom = $(myHTML).filter('.avg-rate-per-room');
       console.log("avg rate per room:", avgrateperroom);
-      $(".room-price").after(avgrateperroom);
+      $(".breakfastSurCharge").before(avgrateperroom);
 
     });
 }
