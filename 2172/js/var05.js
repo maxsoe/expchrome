@@ -1,4 +1,4 @@
-var description = "(UK) 2 rooms, 2 nights - shown after price";
+var description = "For .com - 'Avg rate per room, per night' after price";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
@@ -25,14 +25,11 @@ function setVariant(variant) {
 
   // Insert the content into the page
     $.get( currentVariant, function( myHTML ) {
-      var headContent = $(myHTML)[1];
-      console.log("headContent: ", headContent);
-      $("head").append(headContent);
 
-      var multiroom = $(myHTML).filter('.multi-room')[0].outerHTML;
+      var avgrateperroom = $(myHTML).filter('.avg-rate-per-room')[0].outerHTML;
 
-      console.log("multi-room:", multiroom);
-      $(".avg-rate .breakfastSurCharge").before(multiroom);
+      console.log("avg rate per room:", avgrateperroom);
+      $(".room-price").after(avgrateperroom);
 
     });
 }
