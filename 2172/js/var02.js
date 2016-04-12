@@ -32,7 +32,7 @@ function setVariant(variant) {
       var multiroom = $(myHTML).filter('.multi-room')[0].outerHTML;
 
       console.log("multi-room:", multiroom);
-      $(".avg-rate .room-price-info-wrapper").after(multiroom);
+      $(".avg-rate .breakfastSurCharge").before(multiroom);
 
     });
 }
