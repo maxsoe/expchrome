@@ -53,6 +53,12 @@
 	margin: 0;
 }
 
+.top-level .price {
+	position: absolute;
+	right: 20px;
+	top: 14px;
+}
+
 article {
 	display: block;
 }

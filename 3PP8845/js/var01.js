@@ -19,7 +19,7 @@ function setVariant(variant) {
 
   console.log("currentVariant: ", currentVariant);
   // Remove items from page
-    $(".threePP").empty(); // Filters
+    $("#filterForm").empty(); // Filters
 
   // Insert content into the page
     $.get( currentVariant, function( myHTML ) {
