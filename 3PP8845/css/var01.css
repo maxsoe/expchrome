@@ -34,6 +34,11 @@
 	margin-left: 12px;
 }
 
+.water img,
+.sun img {
+	padding-right: 3px;
+}
+
 .segment {
 	padding: 12px 0;
 }
