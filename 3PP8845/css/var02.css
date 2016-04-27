@@ -103,26 +103,12 @@ article {
 	display: block;
 }
 
-#divRegionList article:first-of-type {
-	border-bottom: 0 !important;
-}
-
-#divRegionList article:nth-of-type(2) {
-	padding-top: 0 !important;
-}
-
 .theme-inline-pills .tabs-container {
 	margin-top: 0 !important;
 }
 
 .theme-inline-pills .tabs {
 	border-top: 0 !important;
-}
-
-.tab-pane .placeholder {
-	height: 190px;
-	width: 100%;
-	margin-top: 6px;
 }
 
 .image-in-placeholder {

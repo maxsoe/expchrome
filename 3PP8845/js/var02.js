@@ -1,4 +1,4 @@
-var description = "Replace region page";
+var description = "Replace region page, and simplify content";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
