@@ -35,7 +35,7 @@ function setVariant(variant) {
 
       var paybackMessage = $(myHTML).filter('.payback-message')[0].outerHTML;
       console.log("paybackMessage:", paybackMessage);
-      $('#divRegionList').after(paybackMessage);
+      $('#sortbarDE').before(paybackMessage);
 
     });
 }

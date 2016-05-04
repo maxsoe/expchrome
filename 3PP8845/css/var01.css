@@ -61,13 +61,13 @@
 
 .segment.no-target .region-info {
 	position: absolute;
-	left: 350px;
+	left: 450px;
 	color: #0065b8;
 }
 
 .segment.no-target .weather {
 	position: absolute;
-	left: 450px;
+	left: 550px;
 }
 
 .segment.no-target .price {
@@ -103,11 +103,11 @@ article {
 	display: block;
 }
 
-#divRegionList article:first-of-type {
+#divRegionList article.first-one {
 	border-bottom: 0 !important;
 }
 
-#divRegionList article:nth-of-type(2) {
+#divRegionList article.second-one {
 	padding-top: 0 !important;
 }
 
@@ -120,7 +120,7 @@ article {
 }
 
 .tab-pane .placeholder {
-	height: 190px;
+	height: 240px;
 	width: 100%;
 	margin-top: 6px;
 }
@@ -142,4 +142,21 @@ aside.four {
 
 nav.pagination {
 	display: none;
+}
+
+.payback-message {
+	margin: 0 .70588235em !important;
+}
+
+.paybackBranding {
+	margin-top: 0 !important;
+}
+
+.mb12 {
+	display: none;
+}
+
+.table-heading .region,
+.table-heading .price-type {
+	display: inline-block;
 }
