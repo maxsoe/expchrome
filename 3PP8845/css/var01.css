@@ -18,6 +18,9 @@
 .locale,
 .price {
 	font-size: 15px;
+}
+
+.price {
 	font-weight: bold;
 }
 
@@ -75,6 +78,10 @@
   right: 108px;
 }
 
+.segment.no-target.top-level .price {
+	right: 51px;
+}
+
 .segmented-list .segment:first-child,
 .segmented-list .segment:first-child .target {
 	border-radius: .17647059em .17647059em 0 0;
@@ -91,6 +98,10 @@
 
 .segmented-list .segment-title .title-main {
 	margin: 0;
+}
+
+.segment-title .price {
+	color: #58738a;
 }
 
 .top-level .price {
@@ -160,3 +171,51 @@ nav.pagination {
 .table-heading .price-type {
 	display: inline-block;
 }
+
+.sort-bar-wrap .sort-filter-bar,
+.sort-bar-tele-blue {
+	display: inline-block;
+}
+
+.sort-bar-wrap .sort-filter-bar {
+	width: 1110px;
+}
+/*
+.book-online-text,
+.phone-number {
+	color: white;
+	font-size: 10px;
+	font-weight: bold;
+	position: relative;
+}
+
+.book-online-text {
+	top: -9px;
+}
+
+.phone-number {
+	top: -15px;
+}
+
+.tele-inner-blue {
+	padding: 6px 0;
+	height: 100%;
+	background: #00355f;
+	padding-top: 6px;
+	margin: 3px;
+	text-align: left;
+	color: #fff;
+	width: 140px;
+}
+
+.tele-inner-blue .cc-agent-head {
+	width: auto;
+	max-width: 32px;
+	margin: 0 2px 4px 2px;
+	float: left;
+}
+
+.tele-inner-blue .icon-phone {
+	color: #ffcb00;
+	margin-right: 4px;
+}*/
