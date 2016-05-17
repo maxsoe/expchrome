@@ -29,7 +29,8 @@ function setVariant(variant) {
       var multinights = $(myHTML).filter('.multi-nights')[0].outerHTML;
 
       console.log("multi-nights:", multinights);
-      $(".avg-rate .breakfastSurCharge").before(multinights);
+      $(".avg-rate .room-price-info-wrapper").after(multinights);
+      $(".avg-rate .breakfastSurCharge").remove();
 
     });
 }
