@@ -25,14 +25,11 @@ function setVariant(variant) {
 
   // Insert the content into the page
     $.get( currentVariant, function( myHTML ) {
-      var headContent = $(myHTML)[1];
-      console.log("headContent: ", headContent);
-      $("head").append(headContent);
 
       var multinights = $(myHTML).filter('.multi-nights')[0].outerHTML;
 
       console.log("multi-nights:", multinights);
-      $(".avg-rate .room-price-info-wrapper").before(multinights);
+      $(".avg-rate .breakfastSurCharge").before(multinights);
 
     });
 }
