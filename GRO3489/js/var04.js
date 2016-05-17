@@ -1,4 +1,4 @@
-var description = "For .com - change the column heading to 'Avg rate per room, per night'";
+var description = "copy h.com";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
@@ -26,10 +26,11 @@ function setVariant(variant) {
   // Insert the content into the page
     $.get( currentVariant, function( myHTML ) {
 
-      var headerrate = $(myHTML).filter('#avg-rate-header')[0].innerHTML;
+      var multinights = $(myHTML).filter('.multi-nights')[0].outerHTML;
 
-      console.log("header rate:", headerrate);
-      $("#avg-rate-header").html(headerrate);
+      console.log("multi-nights:", multinights);
+      $(".avg-rate .room-price-info-wrapper").after(multinights);
+      $(".avg-rate .breakfastSurCharge").remove();
 
     });
 }
