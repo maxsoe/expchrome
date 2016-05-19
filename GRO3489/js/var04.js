@@ -1,4 +1,4 @@
-var description = "copy h.com";
+var description = "cut 'for' - keep copy succient, but it differs from 2172";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"

@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Trivago test: Price display (GPO HIS)",
-  "description": "3489 [GRO]",
+  "description": "GRO - 3489",
   "version": "1.0",
 
   "browser_action": {
@@ -27,8 +27,6 @@
 
   "web_accessible_resources": [
    "html/var01.html",
-   "html/var02.html",
-   "html/var03.html",
-   "html/var04.html"
+   "html/var02.html"
  ]
 }
