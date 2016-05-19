@@ -1,0 +1,18 @@
+.avg-rate-per-room {
+	text-align: right;
+	clear: right;
+	font-size: .7647058823529411em;
+	/* padding-top: .92307692em; */
+	/*margin-top: -6px;*/
+	margin-bottom: 3px;
+}
+
+.rooms-left {
+	margin-top: 6px;
+}
+
+@media only screen and (min-width: 664px) {
+	.avg-rate-per-room {
+		display: none;
+	}
+}

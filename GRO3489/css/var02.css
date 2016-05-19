@@ -1,0 +1,12 @@
+.multi-nights {
+	text-align: right;
+	font-size: .7647058823529411em;
+	margin-top: -6px;
+	padding-bottom: 6px;
+}
+
+@media only screen and (min-width: 664px) {
+	.multi-nights {
+		padding-right: 24px;
+	}
+}
