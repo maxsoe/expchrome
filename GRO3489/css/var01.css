@@ -27,9 +27,3 @@
 	.page-header .lead-price {
 		margin-top: -6px;
 	}
-}
-@media only screen and (min-width: 881px) {
-	.page-header .multi-nights {
-		padding-right: 166px;
-	}
-}
