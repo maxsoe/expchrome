@@ -8,8 +8,9 @@
 .page-header .multi-nights {
 	text-align: right;
 	margin-top: 0;
-	padding-right: 132px;
+	padding-right: 0;
 	padding-bottom: 0;
+	display: none;
 }
 
 @media only screen and (min-width: 664px) {
@@ -17,8 +18,18 @@
 		padding-right: 24px;
 	}
 }
+
+@media only screen and (min-width: 768px) {
+	.page-header .multi-nights {
+		display: block;
+	}
+
+	.page-header .lead-price {
+		margin-top: -6px;
+	}
+}
 @media only screen and (min-width: 881px) {
 	.page-header .multi-nights {
-		padding-right: 166px;
+		padding-right: 132px;
 	}
 }
