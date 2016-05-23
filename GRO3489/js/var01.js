@@ -30,6 +30,7 @@ function setVariant(variant) {
 
       console.log("multi-nights:", multinights);
       $(".avg-rate .room-price-info-wrapper").after(multinights);
+      $(".lead-price").before(multinights);
       $(".avg-rate .breakfastSurCharge").remove();
 
     });

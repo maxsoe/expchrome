@@ -5,8 +5,25 @@
 	padding-bottom: 6px;
 }
 
+.page-header .multi-nights {
+	text-align: right;
+	margin-top: 6px;
+	padding-right: 0;
+	padding-bottom: 0;
+	display: none;
+}
+
 @media only screen and (min-width: 664px) {
 	.multi-nights {
 		padding-right: 24px;
 	}
 }
+
+@media only screen and (min-width: 768px) {
+	.page-header .multi-nights {
+		display: block;
+	}
+
+	.page-header .lead-price {
+		margin-top: -6px;
+	}

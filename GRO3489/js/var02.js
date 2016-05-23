@@ -1,4 +1,4 @@
-var description = "cut 'for' - keep copy succient, but it differs from 2172";
+var description = "copy h.com";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
@@ -33,6 +33,7 @@ function setVariant(variant) {
 
       console.log("multi-nights:", multinights);
       $(".avg-rate .room-price-info-wrapper").after(multinights);
+      $(".lead-price").before(multinights);
       $(".avg-rate .breakfastSurCharge").remove();
 
     });
