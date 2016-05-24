@@ -1,4 +1,4 @@
-var description = "Replace region page";
+var description = "Replace region page, and simplify content";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
@@ -35,7 +35,7 @@ function setVariant(variant) {
 
       var paybackMessage = $(myHTML).filter('.payback-message')[0].outerHTML;
       console.log("paybackMessage:", paybackMessage);
-      $('#sortbarDE').before(paybackMessage);
+      $('#divRegionList').after(paybackMessage);
 
     });
 }

@@ -18,9 +18,6 @@
 .locale,
 .price {
 	font-size: 15px;
-}
-
-.price {
 	font-weight: bold;
 }
 
@@ -64,22 +61,18 @@
 
 .segment.no-target .region-info {
 	position: absolute;
-	left: 450px;
+	left: 350px;
 	color: #0065b8;
 }
 
 .segment.no-target .weather {
 	position: absolute;
-	left: 550px;
+	left: 450px;
 }
 
 .segment.no-target .price {
   position: absolute;
   right: 108px;
-}
-
-.segment.no-target.top-level .price {
-	right: 51px;
 }
 
 .segmented-list .segment:first-child,
@@ -100,10 +93,6 @@
 	margin: 0;
 }
 
-.segment-title .price {
-	color: #58738a;
-}
-
 .top-level .price {
 	position: absolute;
 	right: 20px;
@@ -114,26 +103,12 @@ article {
 	display: block;
 }
 
-#divRegionList article.first-one {
-	border-bottom: 0 !important;
-}
-
-#divRegionList article.second-one {
-	padding-top: 0 !important;
-}
-
 .theme-inline-pills .tabs-container {
 	margin-top: 0 !important;
 }
 
 .theme-inline-pills .tabs {
 	border-top: 0 !important;
-}
-
-.tab-pane .placeholder {
-	height: 240px;
-	width: 100%;
-	margin-top: 6px;
 }
 
 .image-in-placeholder {
@@ -154,68 +129,3 @@ aside.four {
 nav.pagination {
 	display: none;
 }
-
-.payback-message {
-	margin: 0 .70588235em !important;
-}
-
-.paybackBranding {
-	margin-top: 0 !important;
-}
-
-.mb12 {
-	display: none;
-}
-
-.table-heading .region,
-.table-heading .price-type {
-	display: inline-block;
-}
-
-.sort-bar-wrap .sort-filter-bar,
-.sort-bar-tele-blue {
-	display: inline-block;
-}
-
-.sort-bar-wrap .sort-filter-bar {
-	width: 1110px;
-}
-/*
-.book-online-text,
-.phone-number {
-	color: white;
-	font-size: 10px;
-	font-weight: bold;
-	position: relative;
-}
-
-.book-online-text {
-	top: -9px;
-}
-
-.phone-number {
-	top: -15px;
-}
-
-.tele-inner-blue {
-	padding: 6px 0;
-	height: 100%;
-	background: #00355f;
-	padding-top: 6px;
-	margin: 3px;
-	text-align: left;
-	color: #fff;
-	width: 140px;
-}
-
-.tele-inner-blue .cc-agent-head {
-	width: auto;
-	max-width: 32px;
-	margin: 0 2px 4px 2px;
-	float: left;
-}
-
-.tele-inner-blue .icon-phone {
-	color: #ffcb00;
-	margin-right: 4px;
-}*/
