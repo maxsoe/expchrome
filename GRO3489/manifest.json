@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "TREX: Rooms & Rates: Price per Room",
-  "description": "2172 [GRO]",
+  "name": "Trivago test: Price display (GPO HIS)",
+  "description": "GRO - 3489",
   "version": "1.0",
 
   "browser_action": {
@@ -26,8 +26,7 @@
   ],
 
   "web_accessible_resources": [
-   "html/var02.html",
-   "html/var06.html",
-   "html/var10.html"
+   "html/var01.html",
+   "html/var02.html"
  ]
 }
