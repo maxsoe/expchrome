@@ -1,4 +1,4 @@
-var description = "Error message for any time the regions are requested from the wizard";
+var description = "Error message when tabs can't be called";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
@@ -23,14 +23,19 @@ function setVariant(variant) {
 
   // Insert content into the page
     $.get( currentVariant, function( myHTML ) {
-      var alertError = $(myHTML).filter('.alert-error')[0].outerHTML;
-      console.log("alertError:", alertError);
-      $('#sortbarDE').before(alertError);
+      var sortbarDE = $(myHTML).filter('#sortbarDE')[0].outerHTML;
+      console.log("sortbarDE:", sortbarDE);
+      $('#sortbarDE').replaceWith(sortbarDE);
+
+      var divRegionList = $(myHTML).filter('#divRegionList')[0].outerHTML;
+      console.log("divRegionList:", divRegionList);
+      $('section.six .flex-1up').replaceWith(divRegionList);
+
+
 
       var paybackMessage = $(myHTML).filter('.payback-message')[0].outerHTML;
       console.log("paybackMessage:", paybackMessage);
       $('#sortbarDE').before(paybackMessage);
 
-      $('section.six .flex-1up').remove();
     });
 }

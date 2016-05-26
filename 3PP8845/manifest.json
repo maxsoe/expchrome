@@ -27,6 +27,7 @@
 
   "web_accessible_resources": [
    "html/var03.html",
-   "html/search-error.html"
+   "html/search-error.html",
+   "html/tabs-error.html"
  ]
 }
