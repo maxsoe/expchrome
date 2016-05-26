@@ -1,4 +1,4 @@
-var description = "For .com - 'Avg rate per room, per night' after price, and in header";
+var description = "For .com - 'Avg/room, per night' after price, and in header";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
@@ -26,14 +26,11 @@ function setVariant(variant) {
   // Insert the content into the page
     $.get( currentVariant, function( myHTML ) {
 
-      var headerrate = $(myHTML).filter('#avg-rate-header')[0].innerHTML;
-      console.log("header rate:", headerrate);
-      $("#avg-rate-header").html(headerrate);
-
       var avgrateperroom = $(myHTML).filter('.avg-rate-per-room')[0].outerHTML;
-      // var avgrateperroom = $(myHTML).filter('.avg-rate-per-room');
+
       console.log("avg rate per room:", avgrateperroom);
-      $(".breakfastSurCharge").before(avgrateperroom);
+      $(".room-price").after(avgrateperroom);
+      $(".lead-price").before(avgrateperroom);
 
     });
 }

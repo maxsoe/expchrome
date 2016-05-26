@@ -1,4 +1,4 @@
-var description = "For .com - 'Avg rate per room, per night' after price";
+var description = "For .com - 'Avg rate per room, per night' after price, and in header";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
@@ -30,6 +30,7 @@ function setVariant(variant) {
 
       console.log("avg rate per room:", avgrateperroom);
       $(".room-price").after(avgrateperroom);
+      $(".lead-price").before(avgrateperroom);
 
     });
 }
