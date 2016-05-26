@@ -1,0 +1,197 @@
+.segmented-list {
+	margin-bottom: .70588235em;
+	margin-left: 0;
+	border-radius: 0 0 .17647059em .17647059em;
+	padding-left: 0;
+	list-style: none;
+	color: #1f1f1f;
+}
+
+.segmented-list .segment.no-target {
+	/*padding: 1.05882353em;*/
+  padding: 1em 1.05882353em !important;
+	background: #fff;
+  font-size: 13px;
+}
+
+.segmented-list .segment.no-target.top-level,
+.locale,
+.price {
+	font-size: 15px;
+}
+
+.price {
+	display: none;
+	font-weight: bold;
+}
+
+.from {
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.number-of-hotels {
+	color: #616161;
+}
+
+.water {
+	margin-left: 12px;
+}
+
+.water img,
+.sun img {
+	padding-right: 3px;
+}
+
+.segment {
+	padding: 12px 0;
+}
+
+.segment.no-target button {
+  position: absolute;
+	right: 20px;
+	top: 10px;
+}
+
+.segment.no-target a {
+  line-height: 28px;
+}
+
+.segment.no-target .link,
+.segment.no-target .number-of-hotels{
+  margin-top: 6px;
+}
+
+
+.segment.no-target .region-info {
+	position: absolute;
+	left: 450px;
+	color: #0065b8;
+}
+
+.segment.no-target .weather {
+	position: absolute;
+	left: 550px;
+}
+
+.segment.no-target .price {
+  position: absolute;
+  right: 108px;
+}
+
+.segment.no-target.top-level .price {
+	right: 51px;
+}
+
+.segmented-list .segment:first-child,
+.segmented-list .segment:first-child .target {
+	border-radius: .17647059em .17647059em 0 0;
+	padding-bottom: 0.5em !important;
+}
+
+.segmented-list .segment {
+	/*position: relative;*/
+	/*padding-bottom: 0;*/
+	border: 0 solid #e0e0e0 !important;
+	border-width: 0 0 1px !important;
+	background: #fff;
+}
+
+.segmented-list .segment-title .title-main {
+	margin: 0;
+}
+
+.segment-title .price {
+	color: #58738a;
+}
+
+.top-level .price {
+	position: absolute;
+	right: 20px;
+	top: 14px;
+}
+
+article {
+	display: block;
+}
+
+#divRegionList article.first-one {
+	border-bottom: 0 !important;
+}
+
+#divRegionList article.second-one {
+	padding-top: 0 !important;
+}
+
+.theme-inline-pills .tabs-container {
+	margin-top: 0 !important;
+}
+
+.theme-inline-pills .tabs {
+	border-top: 0 !important;
+}
+
+.tab-pane .placeholder {
+	height: 240px;
+	width: 100%;
+	margin-top: 6px;
+	overflow-y: scroll;
+}
+
+.image-in-placeholder {
+	float: left;
+	margin-right: 12px;
+	margin-bottom: 6px;
+}
+
+.site-content > .col.six {
+	width: 100%;
+	margin-top: 0 !important;
+}
+
+aside.four {
+	display: none;
+}
+
+nav.pagination {
+	display: none;
+}
+
+.payback-message {
+	margin: 0 .70588235em !important;
+}
+
+.paybackBranding {
+	margin-top: 0 !important;
+}
+
+.mb12 {
+	display: none;
+}
+
+.table-heading .region,
+.table-heading .price-type {
+	display: inline-block;
+}
+
+.sort-bar-wrap .sort-filter-bar,
+.sort-bar-tele-blue {
+	display: inline-block;
+}
+
+.sort-bar-wrap .sort-filter-bar {
+	width: 1110px;
+}
+
+/* Hide these */
+header > fieldset.cols-nested .col.three {
+	display: none;
+}
+
+#acol-tool-feedback {
+	display: none;
+}
+
+#sortbarDE {
+	display: none;
+}
