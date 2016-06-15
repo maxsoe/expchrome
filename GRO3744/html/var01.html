@@ -1,0 +1,755 @@
+<div id="wizard">
+    <div id="wizardResponsiveContainer" class="cols-row site-content cf container container-on-map">
+
+        <h2 class="visuallyhidden">Change your search</h2>
+        <div id="searchWizard" class="box pattern-playback hotels ">
+            <div id="searchWizardMainWizard" class="playback-search toggle-pane fade open" role="region" style="visibility: visible; opacity: 1;">
+
+                <div class="alert alert-error validation-alert cols-row errorMsgs error" id="wizardErrorMsg" role="alert"> <span class="icon icon-warn" aria-hidden="true"></span>
+                    <h5 class="alert-title">There are errors on the form</h5>
+                    <div class="alert-message">
+                        <p>Please fix the following errors to continue:</p>
+                        <ul class="error-summary">
+                            <li id="wizardDatelessMsg" class="validation-msg error ">
+                                <a href="#inpStartDate">
+                        Enter your travel dates below
+                    </a>
+                            </li>
+                            <li id="originRequiredError" class="validation-msg error">
+                                <a>
+                        Please enter a location.
+                    </a>
+                            </li>
+                            <li id="locationRequiredError" class="validation-msg error">
+                                <a href="#inpSearchNear">
+                        Please enter a location.
+                    </a>
+                            </li>
+                            <li id="checkInRequiredError" class="validation-msg error">
+                                <a href="#inpStartDate">
+                        Please enter a check-in date.
+                    </a>
+                            </li>
+                            <li id="checkOutRequiredError" class="validation-msg error">
+                                <a href="#inpEndDate">
+                        Please enter a check-out date.
+                    </a>
+                            </li>
+                            <!-- same loc message, but the link takes you to the partial stay date fields instead of the trip dates -->
+                            <li id="partialStayCheckInRequiredError" class="validation-msg error">
+                                <a>
+                        Please enter a check-in date.
+                    </a>
+                            </li>
+                            <li id="partialStayCheckOutRequiredError" class="validation-msg error">
+                                <a>
+                        Please enter a check-out date.
+                    </a>
+                            </li>
+                            <li id="wizardMissingChildError" class="validation-msg error">
+                                <a>
+                        Please provide ages of the children below.
+                    </a>
+                            </li>
+                            <li id="wizardDateFormatError" class="validation-msg error">
+                                <a>
+                        Your dates seem to be a bit off. Please enter your travel dates like this: mm/dd/yy.
+                    </a>
+                            </li>
+                            <li id="wizardDateSequenceError" class="validation-msg error">
+                                <a href="#inpStartDate">
+                        Please re-check your calendar and select a check-in date before your check-out date.
+                    </a>
+                            </li>
+                            <li id="wizardDateRangeError" class="validation-msg error">
+                                <a href="#inpEndDate">
+                        Your length of stay cannot be longer than 28 nights.
+                    </a>
+                            </li>
+                            <!-- same loc message, but the link takes you to the partial stay date fields instead of the trip dates -->
+                            <li id="wizardPartialStayDateSequenceError" class="validation-msg error">
+                                <a>
+                        Please re-check your calendar and select a check-in date before your check-out date.
+                    </a>
+                            </li>
+                            <li id="wizardPartialStayDateRangeError" class="validation-msg error">
+                                <a>
+                        Your length of stay cannot be longer than 28 nights.
+                    </a>
+                            </li>
+                            <li id="wizardPriorDateError" class="validation-msg error">
+                                <a>
+                        Please re-check your dates and let's try again. We can't book a day in the past.
+                    </a>
+                            </li>
+                            <li id="wizardDateBetweenErrorCheckIn" class="validation-msg error">
+                                <a>
+                        Sorry but your check-in date must fall within the departing and returning dates. Please enter a new date.
+                    </a>
+                            </li>
+                            <li id="wizardDateBetweenErrorCheckOut" class="validation-msg error">
+                                <a>
+                        Sorry but your check-out date must fall within the departing and returning dates. Please enter a new date.
+                    </a>
+                            </li>
+                            <li id="wizardLapsRequiredError" class="validation-msg error">
+                                <a>
+                        Each lap infant must travel with a person 12 years of age or older.
+                    </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+                <input name="packageType" id="packageType" type="hidden" value="">
+                <input name="c" id="c" type="hidden" value="">
+                <input name="ttla" id="ttla" type="hidden" value="">
+                <input name="ftla" id="ftla" type="hidden" value="">
+                <input name="cabinClass" id="cabinClass" type="hidden" value="">
+                <input name="flightCarrier" id="flightCarrier" type="hidden" value="">
+                <input name="Direct" id="Direct" type="hidden" value="">
+
+
+
+                <fieldset class="cols-row location">
+
+                    <div class="col input-btn-group">
+                        <div class="autocomplete theme-standard" data-control="autocomplete">
+                            <label class="autocomplete-arrow text icon-before" for="inpSearchNear">
+                                <span class="label">        Hotels near<span class="visuallyhidden"> City, airport or attraction</span> </span>
+                                <input type="text" id="inpSearchNear" name="destination" value="Paris (and vicinity), France" placeholder="City, airport or attraction" class="clear-btn-input" locale="en_US" data-closetext="Close" aria-owns="wizardDestinationTypeahead" autocomplete="off"
+                                    spellcheck="false" data-provide="autocomplete" data-template="#uitk-ta-default" data-tooltip-id="wizardDestinationTypeahead" data-js-theme="autocomplete" data-version="v4" data-mask="1631" data-rules="required" data-lob="HOTELS"
+                                    data-autoselect="all" data-required="#locationRequiredError" data-client-id="Hotels.Search" onfocus="this.select()">
+                                <span class="icon icon-location" aria-hidden="true"></span>
+                            </label>
+                            <div class="autocomplete-dropdown" style="display: none;"></div>
+                        </div>
+                        <button type="button" class="btn btn-clear btn-primary" data-control="clear-field">
+                            <span class="btn-label">
+            <span class="icon icon-close" aria-hidden="true"></span>
+                            <span class="alt">Clear field: Hotels near<span class="visuallyhidden"> City, airport or attraction.</span> Field value: <span class="field-value">Paris (and vicinity), France</span></span>
+                            </span>
+                        </button>
+                    </div>
+                </fieldset>
+
+                <fieldset class="cols-row timeframe">
+
+
+
+
+                    <div id="startDateRange" data-control="datepicker" class="datepicker theme-standard pin-left col check-in" data-end-date="#endDateRange" data-last-valid-date="10/28/2017" data-default-range-length="1" data-max-range-length="28" data-auto-pos="true" data-close="true">
+                        <label class="datepicker-label datepicker-arrow text icon-before" for="inpStartDate"><span class="label">        Check-in<span class="visuallyhidden"> Enter date in mm/dd/yyyy format</span><span class="datepicker-expand-collapse visuallyhidden"> collapsed</span></span>
+                            <input id="inpStartDate" class="text datepicker-trigger-input datetext"
+                                type="text" placeholder="mm/dd/yyyy" data-min-range-length="1" value="08/05/2016" name="startDate" size="1" data-dateformat="#wizardDateFormatError" data-otherrequired="#checkInRequiredError,#inpEndDate" data-priortodate="#wizardPriorDateError"
+                                data-max-booking-length="28"><span class="icon icon-calendar" aria-hidden="true"></span></label>
+                        <div class="datepicker-dropdown" aria-hidden="true"></div>
+                    </div>
+
+
+
+                    <div id="endDateRange" data-control="datepicker" class="datepicker theme-standard pin-left col check-out" data-start-date="#startDateRange" data-last-valid-date="10/28/2017" data-auto-pos="true" data-close="true">
+                        <label class="datepicker-label datepicker-arrow text icon-before" for="inpEndDate"><span class="label">        Check-out<span class="visuallyhidden"> Enter date in mm/dd/yyyy format</span><span class="datepicker-expand-collapse visuallyhidden"> collapsed</span></span>
+                            <input id="inpEndDate" class="text datepicker-trigger-input datetext"
+                                type="text" placeholder="mm/dd/yyyy" value="08/08/2016" name="endDate" size="1" data-dateformat="data-dateformat" data-otherrequired="#checkOutRequiredError,#inpStartDate" data-datesequence="#wizardDateSequenceError,#inpStartDate"
+                                data-daterange="#wizardDateRangeError,#inpStartDate" data-default-booking-length="1" data-min-booking-length="1"><span class="icon icon-calendar" aria-hidden="true"></span></label>
+                        <div class="datepicker-dropdown" aria-hidden="true"></div>
+                    </div>
+
+
+
+
+
+                </fieldset>
+
+                <fieldset class="options cols-row">
+                    <div class="col">
+                        <p class="secondary-playback" style="display:inline-block">
+                            <span class="travellers">
+
+                <span id="wizardTravellerSummaryRoom">1 room</span>,
+
+                            <span id="wizardTravellerSummaryAdults">2 adults</span>
+                            </span>
+                        </p>
+                        <a role="button" id="hotels-options-pane-toggle" href="#hotels-options-pane-parent" aria-controls="hotels-options-pane-parent" data-control="toggle" data-transition="fade" data-toggle-text="Show Options" class="toggle-trigger cf wizardOptionsLink secondary"
+                            data-isdisplay-icon="true" aria-expanded="false" data-expand-text="Show Options<span class=&quot;icon icon-expand&quot; aria-hidden=&quot;true&quot;></span>" data-collapse-text="Hide Options<span class=&quot;icon icon-expand&quot; aria-hidden=&quot;true&quot;></span>"> Show Options<span class="icon icon-expand" aria-hidden="true"></span> </a>
+                        <div id="hotels-options-pane-parent" class="toggle-pane" role="region" aria-hidden="true">
+                            <div class="toggle-inner">
+                                <div id="hotels-options-pane" class="options-pane">
+                                    <div class="room" id="room0" data-room-number="1" data-room-index="0">
+
+
+                                        <button data-target-id="room0" type="button" class="btn-close btn-primary roomCloseBtn  hidden" data-control="remove" data-track="HOT.SR.Wizard.RemoveRoom">
+
+                                            <span class="icon icon-close" aria-hidden="true"></span>
+                                            <span class="visuallyhidden"></span>
+                                            <span class="alt">
+                        Remove Room 1
+                    </span>
+
+                                        </button>
+
+
+
+                                        <fieldset class="cols-nested passenger-select">
+                                            <legend><span id="room-legend"><h3 class="room-title">
+            Room 1
+        </h3></span></legend>
+
+
+                                            <label class="col  num-adults   select icon icon-toggle180" for="room0adults" aria-hidden="false">
+                                                <span class="visuallyhidden">
+
+                        Room 1
+
+
+                </span>
+                                                <span class="label">
+                    Adults
+                </span>
+                                                <select name="adults" id="room0adults">
+
+                                                    <option value="1">1</option>
+
+                                                    <option value="2" selected="">2</option>
+
+                                                    <option value="3">3</option>
+
+                                                    <option value="4">4</option>
+
+                                                    <option value="5">5</option>
+
+                                                    <option value="6">6</option>
+
+                                                    <option value="7">7</option>
+
+                                                    <option value="8">8</option>
+
+                                                    <option value="9">9</option>
+
+                                                    <option value="10">10</option>
+
+                                                    <option value="11">11</option>
+
+                                                    <option value="12">12</option>
+
+                                                    <option value="13">13</option>
+
+                                                    <option value="14">14</option>
+
+                                                </select>
+                                            </label>
+
+
+                                            <label class="col  num-children   select icon icon-toggle180" for="room0children" aria-hidden="false">
+                                                <span class="visuallyhidden">
+
+                        Room 1
+
+
+                </span>
+                                                <span class="label">
+                    Children
+                </span>
+                                                <select name="" id="room0children">
+
+                                                    <option value="0" selected="">0</option>
+
+                                                    <option value="1">1</option>
+
+                                                    <option value="2">2</option>
+
+                                                    <option value="3">3</option>
+
+                                                    <option value="4">4</option>
+
+                                                    <option value="5">5</option>
+
+                                                    <option value="6">6</option>
+
+                                                </select>
+                                            </label>
+
+                                        </fieldset>
+
+                                        <fieldset class="cols-nested children-ages">
+
+
+                                            <label class="col hidden    child1 child-age  select icon icon-toggle180" for="room0childAge0" aria-hidden="false">
+                                                <span class="visuallyhidden">
+
+                        Room 1
+
+
+
+                            Child 1 age
+
+
+                </span>
+                                                <span class="label" aria-hidden="true">
+
+            Child 1
+
+                </span>
+                                                <select name="children" id="room0childAge0" disabled="disabled" data-required="#wizardMissingChildError">
+
+                                                    <option value="">--</option>
+
+                                                    <option value="1_0">&lt;1</option>
+
+                                                    <option value="1_1">1</option>
+
+                                                    <option value="1_2">2</option>
+
+                                                    <option value="1_3">3</option>
+
+                                                    <option value="1_4">4</option>
+
+                                                    <option value="1_5">5</option>
+
+                                                    <option value="1_6">6</option>
+
+                                                    <option value="1_7">7</option>
+
+                                                    <option value="1_8">8</option>
+
+                                                    <option value="1_9">9</option>
+
+                                                    <option value="1_10">10</option>
+
+                                                    <option value="1_11">11</option>
+
+                                                    <option value="1_12">12</option>
+
+                                                    <option value="1_13">13</option>
+
+                                                    <option value="1_14">14</option>
+
+                                                    <option value="1_15">15</option>
+
+                                                    <option value="1_16">16</option>
+
+                                                    <option value="1_17">17</option>
+
+                                                </select>
+                                            </label>
+
+
+
+                                            <label class="col hidden    child2 child-age  select icon icon-toggle180" for="room0childAge1" aria-hidden="false">
+                                                <span class="visuallyhidden">
+
+                        Room 1
+
+
+
+                            Child 2 age
+
+
+                </span>
+                                                <span class="label" aria-hidden="true">
+
+            Child 2
+
+                </span>
+                                                <select name="children" id="room0childAge1" disabled="disabled" data-required="#wizardMissingChildError">
+
+                                                    <option value="">--</option>
+
+                                                    <option value="1_0">&lt;1</option>
+
+                                                    <option value="1_1">1</option>
+
+                                                    <option value="1_2">2</option>
+
+                                                    <option value="1_3">3</option>
+
+                                                    <option value="1_4">4</option>
+
+                                                    <option value="1_5">5</option>
+
+                                                    <option value="1_6">6</option>
+
+                                                    <option value="1_7">7</option>
+
+                                                    <option value="1_8">8</option>
+
+                                                    <option value="1_9">9</option>
+
+                                                    <option value="1_10">10</option>
+
+                                                    <option value="1_11">11</option>
+
+                                                    <option value="1_12">12</option>
+
+                                                    <option value="1_13">13</option>
+
+                                                    <option value="1_14">14</option>
+
+                                                    <option value="1_15">15</option>
+
+                                                    <option value="1_16">16</option>
+
+                                                    <option value="1_17">17</option>
+
+                                                </select>
+                                            </label>
+
+
+
+                                            <label class="col hidden    child3 child-age  select icon icon-toggle180" for="room0childAge2" aria-hidden="false">
+                                                <span class="visuallyhidden">
+
+                        Room 1
+
+
+
+                            Child 3 age
+
+
+                </span>
+                                                <span class="label" aria-hidden="true">
+
+            Child 3
+
+                </span>
+                                                <select name="children" id="room0childAge2" disabled="disabled" data-required="#wizardMissingChildError">
+
+                                                    <option value="">--</option>
+
+                                                    <option value="1_0">&lt;1</option>
+
+                                                    <option value="1_1">1</option>
+
+                                                    <option value="1_2">2</option>
+
+                                                    <option value="1_3">3</option>
+
+                                                    <option value="1_4">4</option>
+
+                                                    <option value="1_5">5</option>
+
+                                                    <option value="1_6">6</option>
+
+                                                    <option value="1_7">7</option>
+
+                                                    <option value="1_8">8</option>
+
+                                                    <option value="1_9">9</option>
+
+                                                    <option value="1_10">10</option>
+
+                                                    <option value="1_11">11</option>
+
+                                                    <option value="1_12">12</option>
+
+                                                    <option value="1_13">13</option>
+
+                                                    <option value="1_14">14</option>
+
+                                                    <option value="1_15">15</option>
+
+                                                    <option value="1_16">16</option>
+
+                                                    <option value="1_17">17</option>
+
+                                                </select>
+                                            </label>
+
+
+
+                                            <label class="col hidden    child4 child-age  select icon icon-toggle180" for="room0childAge3" aria-hidden="false">
+                                                <span class="visuallyhidden">
+
+                        Room 1
+
+
+
+                            Child 4 age
+
+
+                </span>
+                                                <span class="label" aria-hidden="true">
+
+            Child 4
+
+                </span>
+                                                <select name="children" id="room0childAge3" disabled="disabled" data-required="#wizardMissingChildError">
+
+                                                    <option value="">--</option>
+
+                                                    <option value="1_0">&lt;1</option>
+
+                                                    <option value="1_1">1</option>
+
+                                                    <option value="1_2">2</option>
+
+                                                    <option value="1_3">3</option>
+
+                                                    <option value="1_4">4</option>
+
+                                                    <option value="1_5">5</option>
+
+                                                    <option value="1_6">6</option>
+
+                                                    <option value="1_7">7</option>
+
+                                                    <option value="1_8">8</option>
+
+                                                    <option value="1_9">9</option>
+
+                                                    <option value="1_10">10</option>
+
+                                                    <option value="1_11">11</option>
+
+                                                    <option value="1_12">12</option>
+
+                                                    <option value="1_13">13</option>
+
+                                                    <option value="1_14">14</option>
+
+                                                    <option value="1_15">15</option>
+
+                                                    <option value="1_16">16</option>
+
+                                                    <option value="1_17">17</option>
+
+                                                </select>
+                                            </label>
+
+
+
+                                            <label class="col hidden    child5 child-age  select icon icon-toggle180" for="room0childAge4" aria-hidden="false">
+                                                <span class="visuallyhidden">
+
+                        Room 1
+
+
+
+                            Child 5 age
+
+
+                </span>
+                                                <span class="label" aria-hidden="true">
+
+            Child 5
+
+                </span>
+                                                <select name="children" id="room0childAge4" disabled="disabled" data-required="#wizardMissingChildError">
+
+                                                    <option value="">--</option>
+
+                                                    <option value="1_0">&lt;1</option>
+
+                                                    <option value="1_1">1</option>
+
+                                                    <option value="1_2">2</option>
+
+                                                    <option value="1_3">3</option>
+
+                                                    <option value="1_4">4</option>
+
+                                                    <option value="1_5">5</option>
+
+                                                    <option value="1_6">6</option>
+
+                                                    <option value="1_7">7</option>
+
+                                                    <option value="1_8">8</option>
+
+                                                    <option value="1_9">9</option>
+
+                                                    <option value="1_10">10</option>
+
+                                                    <option value="1_11">11</option>
+
+                                                    <option value="1_12">12</option>
+
+                                                    <option value="1_13">13</option>
+
+                                                    <option value="1_14">14</option>
+
+                                                    <option value="1_15">15</option>
+
+                                                    <option value="1_16">16</option>
+
+                                                    <option value="1_17">17</option>
+
+                                                </select>
+                                            </label>
+
+
+
+                                            <label class="col hidden    child6 child-age  select icon icon-toggle180" for="room0childAge5" aria-hidden="false">
+                                                <span class="visuallyhidden">
+
+                        Room 1
+
+
+
+                            Child 6 age
+
+
+                </span>
+                                                <span class="label" aria-hidden="true">
+
+            Child 6
+
+                </span>
+                                                <select name="children" id="room0childAge5" disabled="disabled" data-required="#wizardMissingChildError">
+
+                                                    <option value="">--</option>
+
+                                                    <option value="1_0">&lt;1</option>
+
+                                                    <option value="1_1">1</option>
+
+                                                    <option value="1_2">2</option>
+
+                                                    <option value="1_3">3</option>
+
+                                                    <option value="1_4">4</option>
+
+                                                    <option value="1_5">5</option>
+
+                                                    <option value="1_6">6</option>
+
+                                                    <option value="1_7">7</option>
+
+                                                    <option value="1_8">8</option>
+
+                                                    <option value="1_9">9</option>
+
+                                                    <option value="1_10">10</option>
+
+                                                    <option value="1_11">11</option>
+
+                                                    <option value="1_12">12</option>
+
+                                                    <option value="1_13">13</option>
+
+                                                    <option value="1_14">14</option>
+
+                                                    <option value="1_15">15</option>
+
+                                                    <option value="1_16">16</option>
+
+                                                    <option value="1_17">17</option>
+
+                                                </select>
+                                            </label>
+
+
+                                        </fieldset>
+                                    </div>
+                                    <p class="add-room">
+                                        <button id="wizardAddRoomLink" type="button" class="btn-utility btn-secondary " data-track="HOT.SR.Wizard.AddRoom">
+
+                                            <span class="btn-label"><span id="" class="icon icon-add" aria-hidden="true"></span><span class="alt">+</span>Add Room</span>
+
+                                        </button>
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+
+
+
+                <div class="cols-row">
+                    <div class="col submitSearchWizard">
+
+                        <button id="hotelNewSearchLnk" type="submit" class="btn-sub-action btn-secondary " data-track="HOT:SR:UpdateSearch">
+
+                            <span class="btn-label">Search for hotels</span>
+
+                        </button>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div id="" class="cols-row cf playback-summary">
+                <div class="col playback-summary-content">
+                    <div class="cols-nested cf">
+                        <div class="col playback-summary-data">
+
+
+
+
+                            <span id="" class="icon icon-hotels" aria-hidden="true"></span><span class="alt"></span>
+
+                            <span class="labelRow destination">
+                DESTINATION
+            </span>
+                            <button class="destination fakeLink">Paris (and vicinity), France</button>
+
+                        </div>
+                        <div class="col playback-summary-data">
+
+                            <span class="labelRow dates">
+    DATES
+</span>
+                            <button class="dates fakeLink">
+                                <span id="wizardSummaryStartDate">
+    <span class="date-with-dow">Fri, Aug 5</span>
+                                <span class="date-without-dow">Aug 5</span>
+                                </span>
+                                <span aria-hidden="true">-</span>
+                                <span class="visuallyhidden">to</span>
+                                <span id="wizardSummaryEndDate">
+    <span class="date-with-dow">Mon, Aug 8</span>
+                                <span class="date-without-dow">Aug 8</span>
+                                </span>
+                            </button>
+
+
+                        </div>
+                        <div class="col playback-summary-data">
+
+                            <span class="labelRow rooms">
+                ROOMS
+            </span>
+                            <span class="rooms">
+                1
+            </span>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="col playback-toggle playback-summary-data">
+                    <a href="#searchWizardMainWizard" role="button" aria-controls="searchWizardMainWizard" class="toggle-trigger open" data-control="toggle" data-content-id="searchWizardMainWizard" data-transition="fade" aria-expanded="true"> <span class="change">Change search</span> <span class="cancel">Cancel</span> <span class="icon icon-search" aria-hidden="true"></span> </a>
+                </div>
+            </div>
+        </div>
+        <div class="hidden">
+
+
+            <input type="hidden" name="chain" value="" class="hotelGroup">
+            <input type="hidden" id="regionId" name="regionId" value="179898">
+
+            <!--regionId:179898, latLong:-->
+
+            <input type="hidden" id="selected" name="selected">
+            <input type="hidden" id="mctc" name="mctc" value="">
+
+
+
+
+        </div>
+    </div>
+</div>
