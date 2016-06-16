@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "Larger link to search results on Infosite for mobile web",
+  "description": "3829 [GRO]",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "js": [ "js/jquery-2.2.0.min.js", "contentscript.js" ],
+      "matches": ["http://*/*","https://*/*"]
+    }
+  ],
+
+  "web_accessible_resources": [
+   "html/var01.html"
+ ]
+}

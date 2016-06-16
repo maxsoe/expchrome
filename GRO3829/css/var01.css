@@ -1,0 +1,15 @@
+@media (max-width: 479px) {
+  .short-back-to-search {
+    position: relative;
+    bottom: 3px;
+  }
+
+  .back-to-search-wrapper .icon, .search-summary .icon {
+    font-size: 2em;
+  }
+
+  .phone-number {
+    position: relative;
+    top: 11px;
+  }
+}
