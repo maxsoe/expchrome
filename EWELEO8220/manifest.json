@@ -26,6 +26,11 @@
   ],
 
   "web_accessible_resources": [
-   "html/var01.html"
+   "html/orbitzclose.html",
+   "html/orbitzcapped.html",
+   "html/cheapcashclose.html",
+   "html/cheapcashcapped.html",
+   "html/ebookersclose.html",
+   "html/ebookerscapped.html"
  ]
 }
