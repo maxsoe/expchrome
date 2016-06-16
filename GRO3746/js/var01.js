@@ -1,4 +1,4 @@
-var description = "copy h.com, but use blue alert";
+var description = "In rooms and rates module, under search form";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
@@ -19,18 +19,14 @@ function setVariant(variant) {
 
   console.log("currentVariant: ", currentVariant);
   // Clear things from other variants
-    // $(".hotelWrapper .expediaPoints").remove();
-    // $(".hotelWrapper .actualPrice").empty();
-    // $(".hotelWrapper .priceType").empty();
 
   // Insert the content into the page
     $.get( currentVariant, function( myHTML ) {
 
-      var wizard = $(myHTML).filter('#wizard')[0].outerHTML;
+      var paylater = $(myHTML).filter('#paylater')[0].outerHTML;
 
       // console.log("wizard:", wizard);
-      $("#price-change-container").before(wizard);
-      $("body").addClass("wizard-responsive");
+      $("#availability-wizard-container").after(paylater);
 
     });
 }
