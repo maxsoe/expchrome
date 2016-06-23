@@ -1,4 +1,4 @@
-var description = "In rooms and rates module, under search form";
+var description = "Labels before price";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
@@ -29,6 +29,6 @@ function setVariant(variant) {
 
       var totalrate = $(myHTML).filter('.total-rate-display')[0].outerHTML;
       // $(".cross-out-price").after(totalrate);
-      $(".price-wrapper").append(totalrate); 
+      $(".price-wrapper").append(totalrate);
     });
 }
