@@ -1,4 +1,4 @@
-var description = "In rooms and rates module, under search form";
+var description = "Not yet ready";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
