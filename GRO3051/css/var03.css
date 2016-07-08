@@ -1,0 +1,29 @@
+.avg-rate-display,
+.total-rate-display {
+  clear: both;
+  font-size: 13px;
+  text-align: right;
+}
+
+.total-rate-display {
+  padding-top: 6px;
+}
+
+.total-rate-display .total-price {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+@media (min-width: 664px) {
+    .avg-rate-display {
+      margin-right: 24px;
+    }
+    .total-rate-display .total-price{
+      font-size: 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+}
