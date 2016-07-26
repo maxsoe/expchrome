@@ -1,0 +1,83 @@
+.avg-rate-display,
+.total-rate-display {
+  clear: both;
+  font-size: 13px;
+  text-align: right;
+}
+
+.avg-rate-display {
+  font-weight: bold;
+}
+
+.total-rate-display {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.total-rate-display .total-price,
+.total-rate-display .total-price-qualifier {
+  display: inline-block;
+  /*font-size: 17px;
+  font-weight: bold;*/
+}
+
+.expedia-plus,
+.m-resort-fee {
+  font-size: 13px;
+  text-align: right;
+}
+
+.expedia-plus {
+  color: #00355f;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.m-resort-fee {
+  margin-bottom: 6px;
+}
+
+.air-attach {
+  color: #2f7000;
+  font-size: 13px;
+  text-align: right;
+}
+
+.air-attach .badge {
+  color: white;
+  background-color: #2f7000;
+}
+
+.air-attach .message,
+.air-attach .expires {
+  display: block;
+}
+
+.air-attach .expires .countdown {
+  font-weight: bold;
+}
+
+.show-drr-countdown {
+  display: none;
+}
+
+
+@media (min-width: 664px) {
+    .expedia-plus {
+      margin-right: 24px;
+    }
+    .avg-rate-display {
+      /*margin-right: 24px;*/
+    }
+
+    .total-price {
+      /*margin-top: -3px;*/
+    }
+    .total-rate-display .total-price{
+      /*font-size: 24px;*/
+    }
+}
+
+@media (min-width: 1024px) {
+
+}
