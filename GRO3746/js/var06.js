@@ -25,9 +25,11 @@ function setVariant(variant) {
     $.get( currentVariant, function( myHTML ) {
 
       var paylater = $(myHTML).filter('#paylater')[0].outerHTML;
-
       // console.log("wizard:", wizard);
       $("#availability-wizard-container").after(paylater);
+
+      var pageoverlay = $(myHTML).filter('.page-overlay')[0].outerHTML;
+      $("body").append(pageoverlay);
 
     });
 }
