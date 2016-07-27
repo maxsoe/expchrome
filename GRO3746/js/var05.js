@@ -1,5 +1,5 @@
 var description = "Don't miss out on low prices!"+
-"Book now and choose to pay later at the property.";
+"Book now and choose to pay later at the property (excludes pre-paid, non-refundable rooms).";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"

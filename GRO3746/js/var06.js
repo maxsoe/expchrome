@@ -1,5 +1,5 @@
 var description = "Pick the best payment choice for you"+
-"Book now and pay when you stay with no Expedia fees.";
+"Book now and pay when you stay with no Expedia fees (excludes pre-paid, non-refundable rooms).";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
