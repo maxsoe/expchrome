@@ -1,4 +1,4 @@
-var description = "Description of variant 1. Put whatever you want in here";
+var description = "Copying booking.com";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
@@ -22,8 +22,8 @@ function setVariant(variant) {
   // Insert the content into the page
     $.get( currentVariant, function( myHTML ) {
 
-      var newItem = $(myHTML).filter('.chrome-extension-template')[0].outerHTML;
-      $("body").prepend(newItem);
+      var moreOfBrand = $(myHTML).filter('.more-of-brand')[0].outerHTML;
+      $(".whole-listing").append(moreOfBrand);
 
     });
 }

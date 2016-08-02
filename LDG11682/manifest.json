@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Template for starting new Chrome Extensions",
-  "description": "0000 [GRO]",
+  "name": "Easily find hotel brand names in search results",
+  "description": "11682 [LDG]",
   "version": "1.0",
 
   "browser_action": {
@@ -26,6 +26,7 @@
   ],
 
   "web_accessible_resources": [
-   "html/var01.html"
+    "html/var01.html",
+    "html/var02.html"
  ]
 }

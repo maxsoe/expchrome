@@ -1,0 +1,33 @@
+/*
+https://css-tricks.com/css-style-guides/
+*/
+
+article.segment.hotel {
+  margin-bottom: 0 !important;
+}
+
+.left-area {
+  color: white;
+  float: left;
+  width: calc(40% - 70px);
+	margin: 0;
+	min-width: 97px;
+	max-width: 255px;
+	height: 100%;
+}
+
+.more-of-brand {
+    background: white;
+    color: #0065b8;
+    font-size: 13px;
+    border: 1px solid #c7c7c7;
+    border-top: none;
+    margin-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+  .more-of-brand .message {
+    float: left;
+    padding-left: 12px;
+  }
