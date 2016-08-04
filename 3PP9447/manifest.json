@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "3PP - DE Region Page",
-  "description": "3PP - 8845",
+  "name": "3PP - Liability waiver test on DE Region Page",
+  "description": "3PP - 9447",
   "version": "1.0",
 
   "browser_action": {
@@ -26,8 +26,6 @@
   ],
 
   "web_accessible_resources": [
-   "html/var03.html",
-   "html/search-error.html",
-   "html/tabs-error.html"
+   "html/var01.html",
  ]
 }
