@@ -1,4 +1,4 @@
-var description = "Regions based on Excel file. Price unavailable";
+var description = "Message under tabs";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"

@@ -191,3 +191,9 @@ header > fieldset.cols-nested .col.three {
 #acol-tool-feedback {
 	display: none;
 }
+
+.liability-waiver {
+	color: rgb(97, 97, 97);
+	font-size: 13px;
+	margin-top: 6px;
+}
