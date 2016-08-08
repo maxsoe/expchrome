@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Template for starting new Chrome Extensions",
-  "description": "0000 [GRO]",
+  "name": "Region page image copyrights",
+  "description": "9446 [3PP]",
   "version": "1.0",
 
   "browser_action": {

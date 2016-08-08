@@ -1,4 +1,4 @@
-var description = "Description of variant 1. Put whatever you want in here";
+var description = "Move legal info below images";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
@@ -22,8 +22,8 @@ function setVariant(variant) {
   // Insert the content into the page
     $.get( currentVariant, function( myHTML ) {
 
-      var newItem = $(myHTML).filter('.chrome-extension-template')[0].outerHTML;
-      $("body").prepend(newItem);
+      var newItem = $(myHTML).filter('.mystuff')[0].outerHTML;
+      $("#contentDiaShow_0").after(newItem);
 
     });
 }

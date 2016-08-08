@@ -1,0 +1,45 @@
+/*
+https://css-tricks.com/css-style-guides/
+*/
+
+#diaShowImprint {
+  display: none;
+}
+
+.imprintHead {
+    width: 300px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.imprintTxt {
+    width: 300px;
+    margin: 20px 0 0;
+}
+
+.imprintTable {
+    width: 298px;
+    margin: 20px 0 0;
+    border: 1px solid #003366;
+    font-size: 11px;
+}
+
+.imprintTableInstitutionHead,
+.imprintTableCopyrightHead,
+.imprintTableInstitution,
+.imprintTableCopyright {
+    width: 149px;
+    border: solid #003366;
+    border-width: 1px 1px 0 0;
+    text-align: center;
+}
+.imprintTableCopyrightHead {
+    border-width: 0;
+}
+.imprintTableCopyright {
+    border-width: 1px 0 0;
+}
+.imprintTableInstitutionHead {
+    border-width: 0 1px 0 0;
+}
