@@ -27,6 +27,7 @@
 
   "web_accessible_resources": [
     "html/var01.html",
-    "html/var02.html"
+    "html/var02.html",
+    "html/var03.html"
  ]
 }
