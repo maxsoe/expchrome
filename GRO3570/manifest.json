@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Template for starting new Chrome Extensions",
-  "description": "0000 [GRO]",
+  "name": "Add private sharing links to HIS pages",
+  "description": "3570 [GRO], 11726 [LDG]",
   "version": "1.0",
 
   "browser_action": {
