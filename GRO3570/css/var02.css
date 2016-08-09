@@ -1,0 +1,19 @@
+/*
+https://css-tricks.com/css-style-guides/
+*/
+
+.share3570 {
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+.share3570 [type="button"] {
+    margin-top: 0;
+}
+.lead-price .share3570 {
+    float: right;
+}
+@media screen and (min-width: 768px) {
+    .page-header> .share3570 {
+        display: none;
+    }
+}
