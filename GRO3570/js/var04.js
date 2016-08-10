@@ -23,5 +23,6 @@ function setVariant(variant) {
     $.get( currentVariant, function( myHTML ) {
       var share = $(myHTML).filter('.share3570')[0].outerHTML;
       $("#rooms-and-rates").before(share);
+      $(".show-map-poi-wrapper").addClass("cf");
     });
 }
