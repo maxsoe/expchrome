@@ -1,0 +1,60 @@
+/*
+https://css-tricks.com/css-style-guides/
+*/
+
+.share3570 {
+  clear: both;
+  margin-top: 6px;
+  margin-bottom: 0;
+  margin-left: 12px;
+  padding-top: 12px;
+}
+
+.share3570 h2 {
+	color: #536d83;
+  font-size: 1.1764705882352942em;
+	font-weight: normal;
+}
+
+.share3570 .box {
+  margin-right: 12px;
+}
+
+.share3570 button {
+  font-size: .7647058823529411em;
+  width: 100%;
+	line-height: 36px;
+}
+
+.share3570 li {
+  display: table-cell;
+  background-color: #e5e5e5;
+  /*height: 30px;*/
+  float: left;
+  padding-bottom: 0;
+}
+
+.share3570 li:nth-child(2) {
+  margin-left: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .share3570 {
+    margin-left: 0;
+  }
+
+  .share3570 .box {
+    margin-right: 0;
+  }
+}
+
+
+.caption-wrapper {
+	width: 100%;
+	margin-right: 0.5em;
+}
+
+.icon-mail {
+	float: left;
+	margin: 0 6px 0 12px;
+}
