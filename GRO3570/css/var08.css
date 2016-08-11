@@ -8,7 +8,7 @@ https://css-tricks.com/css-style-guides/
 }
 
 .share3570.box {
-  padding: 12px;
+  padding: 0 12px;
 }
 
 .share3570 h4 {
@@ -32,8 +32,8 @@ https://css-tricks.com/css-style-guides/
   padding-bottom: 0;
 }
 
-.share3570 li:nth-of-type(2) {
-  margin-left: 12px;
+.share3570 .copy-link {
+  margin-left: 18px;
 }
 
 @media screen and (min-width: 768px) {
