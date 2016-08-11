@@ -4,35 +4,34 @@ https://css-tricks.com/css-style-guides/
 
 .share3570 {
   clear: both;
-  margin: 0 -12px 12px -12px;
-}
-
-.share3570.box {
-  padding: 12px;
+  margin: 0 0 12px 0;
 }
 
 .share3570 h4 {
-  font-size: 13px;
-  line-height: 18px;
-  margin-top: 0;
-  margin-bottom: 6px;
+	color: #536d83;
+  font-size: 1.1764705882352942em;
+	font-weight: normal;
+}
+
+.share3570 .box {
+  margin-right: 12px;
 }
 
 .share3570 button {
-  font-size: 13px;
+  font-size: .7647058823529411em;
   width: 100%;
 	line-height: 36px;
 }
 
 .share3570 li {
   display: table-cell;
-  font-size: 13px;
+  background-color: #e5e5e5;
+  /*height: 30px;*/
   float: left;
-  line-height: 18px;
   padding-bottom: 0;
 }
 
-.share3570 li:nth-of-type(2) {
+.share3570 li:nth-child(2) {
   margin-left: 12px;
 }
 
@@ -55,20 +54,4 @@ https://css-tricks.com/css-style-guides/
 .icon-mail {
 	float: left;
 	margin: 0 6px 0 12px;
-  margin-left: 0;
-}
-
-@media screen and (min-width: 468px) {
-  .share3570 {
-    width: calc(107% + 2px);
-  }
-
-  .share3570 h4 {
-    font-size: 15px;
-    line-height: 21px;
-  }
-}
-
-@media screen and (min-width: 468px) {
-
 }
