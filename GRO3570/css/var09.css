@@ -7,17 +7,17 @@ https://css-tricks.com/css-style-guides/
   margin: 0 0 12px 0;
 }
 
-.share3570 h4 {
+/*.share3570 h4 {
 	color: #536d83;
   font-size: 1.1764705882352942em;
 	font-weight: normal;
-}
+}*/
 
 .share3570 .box {
   margin-right: 12px;
 }
 
-.share3570 button {
+.share3570 .trigger-link {
   font-size: .7647058823529411em;
   width: 100%;
 	line-height: 36px;
@@ -61,4 +61,74 @@ https://css-tricks.com/css-style-guides/
 .icon-mail {
 	float: left;
 	margin: 0 6px 0 12px;
+}
+
+
+.menu-trigger.btn-text.menu-arrow+.menu {
+	margin-top: .94117647em;
+}
+
+.pin-center+.menu {
+	right: auto;
+}
+.theme-nav+.menu, .theme-standard+.menu {
+	background: #fff;
+	border: 3px solid #00355f;
+	box-shadow: 0 .52941176em 1.58823529em rgba(0,0,0,.12);
+}
+.menu-trigger+.menu {
+	margin-top: .17647059em;
+}
+.menu-bar .menu {
+	background-color: transparent;
+	box-shadow: none;
+	border-radius: .17647059em;
+	border: none;
+	min-width: 11.76470588em;
+}
+.menu-bar .menu, .menu-bar ul {
+	margin: 0;
+	padding: 0;
+}
+.open>.menu {
+	display: block;
+	height: auto;
+	opacity: 1;
+}
+.email-form {
+	width: 20em;
+}
+.menu {
+	z-index: 1000;
+	position: absolute;
+	right: 0;
+	min-width: 100%;
+	height: 0;
+	display: none;
+	opacity: 0;
+	padding-top: .52941176em;
+	border-radius: .17647059em 0 .17647059em .17647059em;
+	background: #fff;
+	border: 3px solid #00355f;
+	word-wrap: normal;
+}
+
+.menu-bar .menu .menu-main {
+	padding: .70588235em;
+}
+.email-form .menu-main {
+	font-size: 17px;
+}
+
+.email-form h4 {
+	color: #00355f;
+	margin: .5em 0;
+	font-size: 17px;
+}
+
+.email-form .email-form-cancel {
+	border: 0;
+	background: 0;
+	color: #0065b8;
+	font-weight: normal;
 }
