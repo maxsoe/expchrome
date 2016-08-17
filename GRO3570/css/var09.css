@@ -95,9 +95,15 @@ https://css-tricks.com/css-style-guides/
 	height: auto;
 	opacity: 1;
 }
-.email-form {
+.email-form,
+.copy-form {
 	width: 20em;
 }
+
+.copy-form p {
+  word-wrap: break-word;
+}
+
 .menu {
 	z-index: 1000;
 	position: absolute;
