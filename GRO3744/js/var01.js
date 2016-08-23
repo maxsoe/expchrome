@@ -29,7 +29,7 @@ function setVariant(variant) {
       var wizard = $(myHTML).filter('#wizard')[0].outerHTML;
 
       // console.log("wizard:", wizard);
-      $("#price-change-container").before(wizard);
+      $(".sub-header").before(wizard);
       $("body").addClass("wizard-responsive");
 
     });
