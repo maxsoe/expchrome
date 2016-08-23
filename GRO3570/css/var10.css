@@ -1,0 +1,142 @@
+/*
+https://css-tricks.com/css-style-guides/
+*/
+
+.share3570 {
+  clear: both;
+  margin: 0 0 12px 0;
+}
+
+/*.share3570 h4 {
+	color: #536d83;
+  font-size: 1.1764705882352942em;
+	font-weight: normal;
+}*/
+
+.share3570 .box {
+  margin-right: 12px;
+}
+
+.share3570 .trigger-link {
+  font-size: .7647058823529411em;
+  width: 100%;
+	line-height: 36px;
+}
+
+.share3570 li {
+  display: table-cell;
+  /*background-color: #e5e5e5;*/
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  /*height: 30px;*/
+  float: left;
+  padding-bottom: 0;
+}
+
+.share3570 .copy-link,
+.share3570 .whatsapp {
+  margin-left: 12px;
+}
+
+.copy-link .caption-wrapper,
+.whatsapp .caption-wrapper {
+  margin-left: 0.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .share3570 {
+    margin-left: 0;
+  }
+
+  .share3570 .box {
+    margin-right: 0;
+  }
+}
+
+
+.caption-wrapper {
+	width: 100%;
+	margin-right: 0.5em;
+}
+
+.icon-mail {
+	float: left;
+	margin: 0 6px 0 12px;
+}
+
+
+.menu-trigger.btn-text.menu-arrow+.menu {
+	margin-top: .94117647em;
+}
+
+.pin-center+.menu {
+	right: auto;
+}
+.theme-nav+.menu, .theme-standard+.menu {
+	background: #fff;
+	border: 3px solid #00355f;
+	box-shadow: 0 .52941176em 1.58823529em rgba(0,0,0,.12);
+}
+.menu-trigger+.menu {
+	margin-top: .17647059em;
+}
+.menu-bar .menu {
+	background-color: transparent;
+	box-shadow: none;
+	border-radius: .17647059em;
+	border: none;
+	min-width: 11.76470588em;
+}
+.menu-bar .menu, .menu-bar ul {
+	margin: 0;
+	padding: 0;
+}
+.open>.menu {
+	display: block;
+	height: auto;
+	opacity: 1;
+}
+.email-form,
+.copy-form {
+	width: 20em;
+}
+
+.copy-form p {
+  word-wrap: break-word;
+}
+
+.menu {
+	z-index: 1000;
+	position: absolute;
+	right: 0;
+	min-width: 100%;
+	height: 0;
+	display: none;
+	opacity: 0;
+	padding-top: .52941176em;
+	border-radius: .17647059em 0 .17647059em .17647059em;
+	background: #fff;
+	border: 3px solid #00355f;
+	word-wrap: normal;
+}
+
+.menu-bar .menu .menu-main {
+	padding: .70588235em;
+}
+.email-form .menu-main {
+	font-size: 17px;
+}
+
+.email-form h4 {
+	color: #00355f;
+	margin: .5em 0;
+	font-size: 17px;
+}
+
+.email-form .email-form-cancel {
+	border: 0;
+	background: 0;
+	color: #0065b8;
+	font-weight: normal;
+}
