@@ -153,11 +153,21 @@ https://css-tricks.com/css-style-guides/
 
 .icon-link {
   width: 15px;
+  -webkit-filter: url(#monochrome);
+  filter:  url(#monochrome);
+  /*box-shadow: #224 0.2em 0.2em 0.6em 0.1em;*/
+}
+.defs-only {
+  position: absolute;
+  height: 0; width: 0;
+  overflow: none;
+  left: -100%;
 }
 
 .icon-whatsapp {
   -webkit-filter: hue-rotate(106deg);
 }
+
 
 .address {
   margin-bottom: 0;
