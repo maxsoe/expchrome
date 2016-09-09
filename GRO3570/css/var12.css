@@ -27,8 +27,14 @@ https://css-tricks.com/css-style-guides/
 }
 
 #result1a.open {
+  border-bottom: 1px solid #e0e0e0;
   width: 180px;
 }
+
+#result1a.open article {
+  border-bottom: 1px solid #e0e0e0;
+}
+
 #result1a.open .info-summary {
   color: #00355f;
 }
