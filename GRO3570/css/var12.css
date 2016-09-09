@@ -2,63 +2,59 @@
 https://css-tricks.com/css-style-guides/
 */
 
-.share3570 {
-  clear: both;
-  margin: 0 0 12px 0;
-}
-
-/*.share3570 h4 {
-	color: #536d83;
-  font-size: 1.1764705882352942em;
-	font-weight: normal;
-}*/
-
-.share3570 .box {
-  margin-right: 12px;
-}
-
-.share3570 .trigger-link {
-  font-size: .7647058823529411em;
-  width: 100%;
-	line-height: 36px;
-}
-
-.share3570 li {
-  display: table-cell;
-  /*background-color: #e5e5e5;*/
-  background-color: white;
-  border-radius: 5px;
-  border: 1px solid #e0e0e0;
-  /*height: 30px;*/
-  float: left;
-  margin-top: 6px;
-  padding-bottom: 0;
-}
-
-.share3570 .copy-link {
-  margin-left: 12px;
-  margin-right: 12px;
-}
-
 .copy-link .caption-wrapper,
 .whatsapp .caption-wrapper {
   /*margin-left: 0.5em;*/
 }
 
-@media screen and (min-width: 768px) {
-  .share3570 {
-    margin-left: 0;
-  }
+.info-summary {
+    color: #0065b8;
+}
 
-  .share3570 .box {
-    margin-right: 0;
-  }
+.share-label {
+  position: relative;
+  top: 2px;
+}
+
+#result1a {
+  /*width: 70px;*/
+}
+
+#result1a,
+#result1a.viewed {
+  width: 70px;
+}
+
+#result1a.open {
+  width: 180px;
+}
+
+#result1a .info-summary,
+#result1a.viewed .info-summary {
+  float: left;
+  width: 70px;
+}
+
+#resultToggle1a ul {
+  padding-left: 0;
+}
+
+#resultToggle1a li {
+    list-style-type: none;
+}
+
+#resultToggle1a li .icon {
+  margin-left: 0;
+}
+
+@media screen and (min-width: 768px) {
 }
 
 
 .caption-wrapper {
-	width: 100%;
+	font-size: 13px;
 	margin-right: 0.5em;
+  width: 100%;
 }
 
 .icon-mail {
