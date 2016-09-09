@@ -9,6 +9,7 @@ https://css-tricks.com/css-style-guides/
 
 .info-summary {
     color: #0065b8;
+    padding-left: 12px !important;
 }
 
 .share-label {
@@ -28,6 +29,9 @@ https://css-tricks.com/css-style-guides/
 #result1a.open {
   width: 180px;
 }
+#result1a.open .info-summary {
+  color: #00355f;
+}
 
 #result1a .info-summary,
 #result1a.viewed .info-summary {
@@ -36,6 +40,7 @@ https://css-tricks.com/css-style-guides/
 }
 
 #resultToggle1a ul {
+  margin-top: 3px;
   padding-left: 0;
 }
 
