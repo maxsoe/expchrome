@@ -4,7 +4,7 @@ https://css-tricks.com/css-style-guides/
 
 .share3570 {
   clear: both;
-  margin: 0 0 12px 0;
+  margin: -6px 0 12px 0;
 }
 
 /*.share3570 h4 {
@@ -31,7 +31,7 @@ https://css-tricks.com/css-style-guides/
   border: 1px solid #e0e0e0;
   /*height: 30px;*/
   float: left;
-  margin-top: 6px;
+  /*margin-top: 6px;*/
   padding-bottom: 0;
 }
 
@@ -57,7 +57,7 @@ https://css-tricks.com/css-style-guides/
   font-weight: bold;
   float: left;
   line-height: 36px;
-  margin-top: 6px;
+  /*margin-top: 6px;*/
   margin-right: 12px;
 }
 
@@ -67,6 +67,9 @@ https://css-tricks.com/css-style-guides/
 }
 
 @media screen and (min-width: 492px) {
+  .share3570 {
+    margin-top: 0;
+  }
   .share3570 .caption-wrapper {
     display: inline;
   }
