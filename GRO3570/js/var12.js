@@ -21,7 +21,7 @@ function setVariant(variant) {
 
   // Insert the content into the page
     $.get( currentVariant, function( myHTML ) {
-      var share = $(myHTML).filter('.results-list')[0].outerHTML;
+      var share = $(myHTML).filter('.menu-bar')[0].outerHTML;
       $(".address").after(share);
       $(".show-map-poi-wrapper").addClass("cf");
     });
