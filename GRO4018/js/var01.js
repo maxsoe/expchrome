@@ -1,4 +1,4 @@
-var description = "Description of variant 1. Put whatever you want in here";
+var description = "Link and button";
 
 chrome.runtime.sendMessage({
   fn: "getVariant"
@@ -22,8 +22,12 @@ function setVariant(variant) {
   // Insert the content into the page
     $.get( currentVariant, function( myHTML ) {
 
-      var newItem = $(myHTML).filter('.chrome-extension-template')[0].outerHTML;
-      $("body").prepend(newItem);
+      var leftChevron = $(myHTML).filter('.icon-toggle270')[0].outerHTML;
+      $(".map-heading").prepend(leftChevron);
+
+      var mapClose = $(myHTML).filter('.btn-label')[0].outerHTML;
+
+      $(".map-close .btn-label").replaceWith(mapClose);
 
     });
 }

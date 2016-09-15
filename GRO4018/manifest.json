@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Template for starting new Chrome Extensions",
-  "description": "0000 [GRO]",
+  "name": "Improve visibility of back button on map",
+  "description": "4018 [GRO]",
   "version": "1.0",
 
   "browser_action": {

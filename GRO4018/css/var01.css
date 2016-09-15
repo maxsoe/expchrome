@@ -1,0 +1,50 @@
+/*
+https://css-tricks.com/css-style-guides/
+*/
+
+.map-heading {
+  color: #0065b8;
+  width: 80%;
+}
+
+.icon-toggle270 {
+  display: inline-block;
+}
+
+#hotel-map-header button {
+  display: block !important;
+  margin-top: 0;
+}
+
+.small-map-close {
+    display: none;
+}
+
+.map-document {
+  padding-top: 2px;
+}
+
+.map-close .btn-label .map-label {
+  display: none;
+}
+
+@media (min-width:512px) {
+  .icon.icon-toggle270 {
+    display: none;
+  }
+  .map-heading {
+    color: #1f1f1f;
+  }
+}
+
+@media (min-width:726px) {
+  .map-document {
+    padding-top: 0;
+  }
+  #hotel-map-header button {
+    margin-top: 24px;
+  }
+  .map-close .btn-label .map-label {
+    display: inline;
+  }
+}
