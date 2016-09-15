@@ -29,10 +29,10 @@ https://css-tricks.com/css-style-guides/
 }
 
 @media (min-width:512px) {
-  .icon.icon-toggle270 {
+  #hotel-map .icon.icon-toggle270 {
     display: none;
   }
-  .map-heading {
+  #hotel-map .map-heading {
     color: #1f1f1f;
   }
 }
@@ -47,4 +47,20 @@ https://css-tricks.com/css-style-guides/
   .map-close .btn-label .map-label {
     display: inline;
   }
+  #hsrMap .btn-sub-action.btn-secondary.map-close {
+    bottom: 0.588235em !important;
+  }
+}
+
+#hsrMap .map-header {
+  padding-left: 12px;
+}
+
+#hsrMap .mobileCloseButton {
+  display: none;
+}
+
+#hsrMap .btn-sub-action.btn-secondary.map-close {
+  display: block !important;
+  bottom: 4px;
 }
