@@ -12,13 +12,16 @@ https://css-tricks.com/css-style-guides/
   top: 2px;
 }
 
-#result1a {
-  /*width: 70px;*/
+.icon-toggle270:after {
+  -webkit-transform: rotate(-270deg) !important;
+  -ms-transform: rotate(-270deg) !important;
+  transform: rotate(-270deg) !important;
 }
 
-#result1a,
-#result1a.viewed {
-  width: 70px;
+.point-down{
+    top: 2px;
+    border-left: solid 1px #ccc;
+    padding-left: 3px;
 }
 
 #result1a.open {
@@ -38,10 +41,15 @@ https://css-tricks.com/css-style-guides/
   color: #00355f;
 }
 
+#result1a,
+#result1a.viewed {
+  width: 88px;
+}
+
 #result1a .info-summary,
 #result1a.viewed .info-summary {
   float: left;
-  width: 70px;
+  width: 88px;
 }
 
 #resultToggle1a ul {
