@@ -22,8 +22,8 @@ function setVariant(variant) {
   // Insert the content into the page
     $.get( currentVariant, function( myHTML ) {
 
-      var leftChevron = $(myHTML).filter('.icon-toggle270')[0].outerHTML;
-      $("#hsrMap .map-heading").prepend(leftChevron);
+      // var leftChevron = $(myHTML).filter('.icon-toggle270')[0].outerHTML;
+      // $("#hsrMap .map-heading").prepend(leftChevron);
 
       var mapClose = $(myHTML).filter('.btn-label')[0].outerHTML;
 
